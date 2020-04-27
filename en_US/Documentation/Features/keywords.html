@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang=en_US class=no-js>
+  <head>
+    <meta name=type content="doc">
+          <title>Keywords</title>
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name=generator content="Pankyll v0.1.0">
+
+      <meta name="description" content="Keywords feature documentation">
+
+
+      <meta name="keyword" content="Keywords">
+
+      <meta property="og:title" content="Keywords">
+      <meta property="og:description" content="Keywords feature documentation">
+      <meta property="og:type" content="article">
+      <meta property="og:url" content="/en_US/Documentation/Features/keywords.md">
+
+      <meta property="article:published_time" content="2020-04-26 17:20:49 ">
+
+
+      <meta property="article:modified_time" content="2020-04-26 17:20:49 ">
+
+      <meta property="og:site_name" content="Pankyll">
+      <meta itemprop=name content="Keywords">
+      <meta itemprop=description content="Keywords feature documentation">
+
+      <meta itemprop=datePublished content="2020-04-26 17:20:49 ">
+
+
+      <meta itemprop=dateModified content="2020-04-26 17:20:49 ">
+
+
+      <meta itemprop=wordCount content="560">
+
+      <meta itemprop=keywords content="cheat sheet,">
+      <meta name=twitter:card content="summary">
+      <meta name=twitter:title content="Keywords">
+      <meta name=twitter:description content="Keywords feature documentation">
+
+
+
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/railscasts.min.css">
+
+      <link rel="stylesheet" href="/css/all.min.css">
+      <link rel="stylesheet" href="/css/rankle.css">
+
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+
+  </head>
+  <body class="rankle">
+
+
+    <header>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="/">Pankyll</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    
+    <ul class="navbar-nav mt-2 mt-lg-0">
+        
+        <li class="nav-item mr-4 mb-2 mb-lg-0 ">
+           <a class="nav-link pankyll-nav-topic" href="/en_US/About/"><span class="pankyll-nav-topic">About</span></a>
+        </li>
+        
+        <li class="nav-item mr-4 mb-2 mb-lg-0 active">
+           <a class="nav-link pankyll-nav-topic" href="/en_US/Documentation/"><span class="pankyll-nav-topic">Documentation</span></a>
+        </li>
+        
+        <li class="nav-item mr-4 mb-2 mb-lg-0 ">
+           <a class="nav-link pankyll-nav-topic" href="/en_US/Pankyll-Themes/"><span class="pankyll-nav-topic">Pankyll Themes</span></a>
+        </li>
+        
+        <li class="nav-item mr-4 mb-2 mb-lg-0 ">
+           <a class="nav-link pankyll-nav-topic" href="/en_US/Example-Sites/"><span class="pankyll-nav-topic">Example Sites</span></a>
+        </li>
+        
+    </ul>
+    
+    
+    <li class="nav-item dropdown d-none d-lg-block">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="pankyll-nav-topic">
+                More
+            </span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        
+            <a class="dropdown-item" href="/en_US/Categories/">Categories</a>
+        
+            <a class="dropdown-item" href="/en_US/Tags/">Tags</a>
+        
+        </div>
+    </li>
+
+    
+  </div>
+</nav>
+    </header>
+
+
+    <div class="rankle-body">
+
+      <section class="rankle-content">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 order-lg-2">
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+    <ol class="breadcrumb spb-1">
+    
+        <li class="breadcrumb-item">
+            <a href="/en_US/Documentation/">Documentation</a>
+        </li>
+    
+        <li class="breadcrumb-item">
+            <a href="/en_US/Documentation/Features/">Features</a>
+        </li>
+    
+        <li class="breadcrumb-item active">
+            <a href="/en_US/Documentation/Features/keywords.html">Keywords</a>
+        </li>
+    
+    </ol>
+</nav>
+            
+    <div class="title">
+        <h1 id="title">Keywords</h1>
+        
+        
+        <h3 id="author">2020-04-26</h3>
+    </div>
+
+            <h2 id="meta-keyword">Meta Keyword</h2>
+<p>The keyword feature is optional and references some different concepts: (A) The keywords referenced in the <a href="https://en.wikipedia.org/wiki/HTML">HTML</a> head meta section of the page invisible to the user but usable by search engines to rate the page. The first step is to define keywords in the front matter section of a page. Then secondly the template iterates over all keywords and creates meta tags in the <a href="https://en.wikipedia.org/wiki/HTML">HTML</a> head section. The following tree section show the different aspects for a keyword <code>example</code>. The keyword feature is always available regardless of the <code>cfg.yaml</code> site configuration.</p>
+<h3 id="page-front-matter-keyword">Page Front Matter Keyword</h3>
+<pre class="yaml"><code>keywords:
+    - example</code></pre>
+<h3 id="meta-keyword-template">Meta Keyword Template</h3>
+<pre class="html"><code>{% if keywords %}{% for keyword in keywords %}
+        &lt;meta name=&quot;keyword&quot; content=&quot;{{ keyword }}&quot;&gt;
+{% endfor %}{% endif %}</code></pre>
+<h3 id="meta-keyword-html-rendered">Meta Keyword HTML Rendered</h3>
+<pre class="html"><code>        &lt;meta name=&quot;keyword&quot; content=&quot;example&quot;&gt;</code></pre>
+<h2 id="user-keywords">User Keywords</h2>
+<p>And (B), in addition to the above meaning of <strong>keyword feature</strong> the site author can create sets of additional keyword classes for different kind of keyword. This kind of keywords should <strong>not</strong> be called <code>keyword</code> or <code>keywords</code>. Let’s have an example to clarify this. Assuming the site should provide keywords by the author of a page, the site administrator could call them <code>tags</code> and add two configuration sections, one is called <code>keywords:</code> (a reserved word for this purpose) and the other one is called <code>tags:</code> to <code>cfg.yaml</code> like this.</p>
+<pre class="yaml"><code>keywords:
+    - tags
+
+tags:
+    en_US:
+        text: Tags
+        url:  en_US/Tag</code></pre>
+<p>Of course this additional keyword can be called differently and also it is possible to add more than one keyword kind. While A theme can have support for the <strong>keyword feature</strong>, your local configuration in <code>cfg.yaml</code> do not have to use it. It is total optionally. If you do not want to use keywords do not add the word ‘keywords’ to <code>cfg.yaml</code> or leave this section empty. However, if you would like to use keywords, you can so by adding keys to the section ‘<code>keywords:</code> and then for every defined keyword key a section with translations for that key. Later your pages can use the keyword key inside the front matter to add keywords. For every such entity a aggregation page is created by <a href="https://www.pankyll.org/">Pankyll</a> . A reserved word, which should <strong>not</strong> be used in <code>cfg.yaml</code>, but may be used (or not) in the front matter only is the word ’keywords’. The entries inside the ‘keywords’ section in the front matter can be used by a theme to create <a href="https://en.wikipedia.org/wiki/HTML">HTML</a> meta tags in the head of the <a href="https://en.wikipedia.org/wiki/HTML">HTML</a> page as described above. Unlike other keyword entities keywords which are assigned via front matter ‘keywords:’ section, no aggregation page will be created. Let’s see an example, where we have to different kind of keywords: <code>apple</code> and <code>color</code>.</p>
+<h2 id="page-front-matter-of-an-english-page">Page Front Matter Of An English Page</h2>
+<pre class="yaml"><code>apple:
+    - Golden Delicious
+color:
+    - Yellow</code></pre>
+<h3 id="configuration">Configuration</h3>
+<pre class="yaml"><code>keywords:
+    - apple
+    - color
+apple:
+    en_US:
+        text: Apples
+        url:  en_US/Apples
+    de_DE:
+        text: Äpfel
+        url: de_DE/Apples
+    ja_JP:
+        text: りんご
+        url: ja_JP/Apples</code></pre>
+<p>When running the <code>pankyll</code> command line tool or using the Makefile command <code>make build</code> the following pages are created, assuming similar front matter at the other languages pages. The <code>index.html</code> pages will give a list of keywords where each keyword page, like <code>Golden Delicious.html</code> list all pages that reference the keyword.</p>
+<pre><code>public/en_US/Apples/index.md
+public/en_US/Apples/index.html
+public/en_US/Apples/Golden Delicious.md
+public/en_US/Apples/Golden Delicious.html
+public/en_US/Color/index.md
+public/en_US/Color/index.html
+public/en_US/Apples/Yellow.md
+public/en_US/Apples/Yellow.html
+public/de_DE/Apples/index.md
+public/de_DE/Apples/index.html
+public/de_DE/Apples/Golden Delicious.md
+public/de_DE/Apples/Golden Delicious.html
+public/de_DE/Color/index.md
+public/de_DE/Color/index.html
+public/de_DE/Apples/Gelb.md
+public/de_DE/Apples/Gelb.html
+public/ja_JP/Apples/index.md
+public/ja_JP/Apples/index.html
+public/ja_JP/Apples/ゴールデンデリシャス.md
+public/ja_JP/Apples/ゴールデンデリシャス.html
+public/ja_JP/Color/index.md
+public/ja_JP/Color/index.html
+public/ja_JP/Apples/黄色.md
+public/ja_JP/Apples/黄色.html</code></pre>
+
+            
+    
+
+
+
+
+            
+
+
+            
+                <hr>
+    <ul class="status">
+        
+        
+  <li>Last modified (via git): April 26, 2020</li>
+
+
+        
+    
+    <li><a href="https://github.com/ckuelker/pankyll-documentation/commit/a932719c5e6142db4f621ab536b3f768e631490f">fix Markdown formatting (a932719c)</a></li>
+    
+
+        <li>560 words</li>
+        <li><a class="rankle-link" href="/en_US/Documentation/Features/keywords.pdf">🡻 PDF</a></li>
+
+    </ul>
+
+            
+          </div>
+        </div>
+      </section>
+
+
+      <div class="rankle-sidebar-1 hg-sidebar">
+        <div class="col-sm-12 col-md-12 col-lg-12 td-sidebar bar-toc bar-left">
+                 
+       <ul class="td-sidebar-nav-toc-tile">
+         <li class"td-sidebar-nav-toc-tile-item">Keywords</li>
+       
+         <ul>
+<li><a href="#meta-keyword">Meta Keyword</a>
+<ul>
+<li><a href="#page-front-matter-keyword">Page Front Matter Keyword</a></li>
+<li><a href="#meta-keyword-template">Meta Keyword Template</a></li>
+<li><a href="#meta-keyword-html-rendered">Meta Keyword HTML Rendered</a></li>
+</ul></li>
+<li><a href="#user-keywords">User Keywords</a></li>
+<li><a href="#page-front-matter-of-an-english-page">Page Front Matter Of An English Page</a>
+<ul>
+<li><a href="#configuration">Configuration</a></li>
+</ul></li>
+</ul>
+
+       
+       </ul>
+       
+       
+
+       
+        </div>
+      </div>
+
+
+      <div class="col-sm-12 col-md-12 col-lg-2 order-lg-3 bar-tools bar-right">
+        <div class="rankle-sidebar-2 hg-sidebar">
+          <!-- RIGHT SIDE TOOLS -->
+
+
+      <div class="wrapper">
+        <ul>
+
+          <li>
+            <input type="checkbox" id="list-item-1">
+            <label for="list-item-1" class="first">Download</label>
+            <ul>
+              <li><a href="/en_US/Documentation/Features/keywords.pdf">🡻 PDF</a></li>
+            </ul>
+          </li>
+
+
+
+    
+        
+            
+          <li>
+           <input type="checkbox" id="list-item-2">
+            <label for="list-item-2" class="first">Categories</label>
+              <ul>
+            
+                
+                
+                <li><a class="categories-link" href="/en_US/Categories//Feature.html">Feature</a></li>
+            
+              </ul>
+          </li>
+        
+    
+        
+            
+          <li>
+           <input type="checkbox" id="list-item-3">
+            <label for="list-item-3" class="first">Tags</label>
+              <ul>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//HTML.html">HTML</a></li>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//Keywords.html">Keywords</a></li>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//Pankyll.html">Pankyll</a></li>
+            
+              </ul>
+          </li>
+        
+    
+
+
+
+
+
+    
+          <li>
+            <input type="checkbox" id="list-item-4">
+            <label for="list-item-4" class="first">Git</label>
+            <ul>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/blob/master/en_US/Documentation/Features/keywords.md"><i class="fab fa-github fa-fw"></i>View latest on Github</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/edit/master/en_US/Documentation/Features/keywords.md"><i class="fa fa-edit fa-fw"></i>Edit this page</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/commit/a932719c5e6142db4f621ab536b3f768e631490f"><i class="fab fa-git-alt fa-fw"></i>View commit on Github</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/issues/new?title=Documentation"><i class="fa fa-book fa-fw"></i>Create documentation issue</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/issues/new"><i class="fas fa-tasks fa-fw"></i>Create project issue</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <footer>
+      <footer class="bg-dark row d-print-none footer">
+  <div class="footer container-fluid mx-sm5">
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <div class="container-fluid" style="margin-top:5px">
+        <div class="row">
+          <div class="col-sm-2 footer-left">
+            
+            <ul class="list-inline mb-0 footer-list">
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Mailing List" data-original-title="Mailing List">
+               <a class="text-white footer-link" target="_blank" href="https://example.org/mail">
+                 <i class="fa fa-envelope"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Twitter" data-original-title="Twitter">
+               <a class="text-white footer-link" target="_blank" href="https://example.org/mail">
+                 <i class="fab fa-twitter"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Stack Overflow" data-original-title="Stack Overflow">
+               <a class="text-white footer-link" target="_blank" href="https://example.org/mail">
+                 <i class="fab fa-stack-overflow"></i>
+               </a>
+              </li>
+            
+            </ul>
+            
+          </div>
+          <div class="col-sm-8 footer-mid">
+            
+            <ul class="list-inline mb-0 footer-list">
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Pankyll" data-original-title="Pankyll">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker/pankyll">
+                 <i class="fab fa-python"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Rankle" data-original-title="Rankle">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker/pankyll-theme-rankle">
+                 <i class="fab fa-html5"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Example" data-original-title="Example">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker/pankyll-theme-rankle-example">
+                 <i class="fab fa-git-alt"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Developer" data-original-title="Developer">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker">
+                 <i class="fa fa-user-circle"></i>
+               </a>
+              </li>
+            
+            </ul>
+            
+            <ul class="footer-list footer-middle-list">
+              <li class="footer-item footer-middle-item site-update-last-item">Last site update: 2020-04-27</li>
+            
+              <li class="footer-item footer-middle-item">© 2020 Christian Külker, All Rights Reserved</li>
+            
+              <li class="footer-item footer-middle-item">Content license: <a class="rankle-link-dark" href="/en_US/License">GNU Free Document License v1.3</a></li>
+            
+            <li class="footer-list-item footer-middle-list-item">
+              <a class="rankle-link-dark footer-link footer-middle-link generator-link" href="https://github.com/ckuelker/pankyll">Pankyll v0.1.0</a>
+              theme <a class="rankle-link-dark theme-link" href="https://github.com/ckuelker/pankyll-theme-rankle">pankyll-theme-rankle v0.1.0</a>
+            </li>
+            </ul>
+
+          </div>
+         <div class="col-sm-2 footer-right">
+            
+            <ul class="list-inline mb-0 footer-list">
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Git Home" data-original-title="Git Home">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker/pankyll-theme-rankle-example">
+                 <i class="fab fa-github"></i>
+               </a>
+              </li>
+            
+            </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+</script>
+<script src="/js/rankle.js"></script>
+
+
+    </footer>
+  </body>
+</html>

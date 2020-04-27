@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang=en_US class=no-js>
+  <head>
+    <meta name=type content="doc">
+          <title>Creating A Pankyll Site</title>
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name=generator content="Pankyll v0.1.0">
+
+      <meta name="description" content="Creating a Pankyll web site from scratch">
+
+
+      <meta name="keyword" content="Pankyll Site">
+
+      <meta property="og:title" content="Creating A Pankyll Site">
+      <meta property="og:description" content="Creating a Pankyll web site from scratch">
+      <meta property="og:type" content="article">
+      <meta property="og:url" content="/en_US/Documentation/creating-a-pankyll-site.md">
+
+      <meta property="article:published_time" content="2020-04-26 00:20:54 ">
+
+
+      <meta property="article:modified_time" content="2020-04-26 00:20:54 ">
+
+      <meta property="og:site_name" content="Pankyll">
+      <meta itemprop=name content="Creating A Pankyll Site">
+      <meta itemprop=description content="Creating a Pankyll web site from scratch">
+
+      <meta itemprop=datePublished content="2020-04-26 00:20:54 ">
+
+
+      <meta itemprop=dateModified content="2020-04-26 00:20:54 ">
+
+
+      <meta itemprop=wordCount content="650">
+
+      <meta itemprop=keywords content="cheat sheet,">
+      <meta name=twitter:card content="summary">
+      <meta name=twitter:title content="Creating A Pankyll Site">
+      <meta name=twitter:description content="Creating a Pankyll web site from scratch">
+
+
+
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/railscasts.min.css">
+
+      <link rel="stylesheet" href="/css/all.min.css">
+      <link rel="stylesheet" href="/css/rankle.css">
+
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+
+  </head>
+  <body class="rankle">
+
+
+    <header>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="/">Pankyll</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    
+    <ul class="navbar-nav mt-2 mt-lg-0">
+        
+        <li class="nav-item mr-4 mb-2 mb-lg-0 ">
+           <a class="nav-link pankyll-nav-topic" href="/en_US/About/"><span class="pankyll-nav-topic">About</span></a>
+        </li>
+        
+        <li class="nav-item mr-4 mb-2 mb-lg-0 active">
+           <a class="nav-link pankyll-nav-topic" href="/en_US/Documentation/"><span class="pankyll-nav-topic">Documentation</span></a>
+        </li>
+        
+        <li class="nav-item mr-4 mb-2 mb-lg-0 ">
+           <a class="nav-link pankyll-nav-topic" href="/en_US/Pankyll-Themes/"><span class="pankyll-nav-topic">Pankyll Themes</span></a>
+        </li>
+        
+        <li class="nav-item mr-4 mb-2 mb-lg-0 ">
+           <a class="nav-link pankyll-nav-topic" href="/en_US/Example-Sites/"><span class="pankyll-nav-topic">Example Sites</span></a>
+        </li>
+        
+    </ul>
+    
+    
+    <li class="nav-item dropdown d-none d-lg-block">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="pankyll-nav-topic">
+                More
+            </span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        
+            <a class="dropdown-item" href="/en_US/Categories/">Categories</a>
+        
+            <a class="dropdown-item" href="/en_US/Tags/">Tags</a>
+        
+        </div>
+    </li>
+
+    
+  </div>
+</nav>
+    </header>
+
+
+    <div class="rankle-body">
+
+      <section class="rankle-content">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 order-lg-2">
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+    <ol class="breadcrumb spb-1">
+    
+        <li class="breadcrumb-item">
+            <a href="/en_US/Documentation/">Documentation</a>
+        </li>
+    
+        <li class="breadcrumb-item active">
+            <a href="/en_US/Documentation/creating-a-pankyll-site.html">Creating A Pankyll Site</a>
+        </li>
+    
+    </ol>
+</nav>
+            
+    <div class="title">
+        <h1 id="title">Creating A Pankyll Site</h1>
+        <h3 id="author">Christian Külker</h3>
+        
+        <h3 id="author">2020-04-25</h3>
+    </div>
+
+            <p>The easiest way to create a web site is to use an <a href="https://www.pankyll.org/en_US/Example-Sites">example</a> repository to kick start the web site. See the <a href="UNKNOWN">getting started</a> page for details. However, this document describes in more detail how to kick start a <a href="https://www.pankyll.org/">Pankyll</a> web site from scratch. For this to work it is assumed that <a href="https://www.pankyll.org/">Pankyll</a> is installed. Choose a site name, for example ‘<strong>mysite</strong>’. We assume you use the <a href="/en_US/Pankyll-Themes/pankyll-theme-rankle.html">Rankle</a> <a href="/en_US/Pankyll-Themes/">theme</a>.</p>
+<pre class="shell"><code>mkdir mysite
+cd mysite
+git init
+mkdir -p content/en_US static themes
+
+# add the Pandoc filters
+export URL=https://github.com/ckuelker/pankyll-pandoc
+git submodule add -b master $URL pandoc
+git submodule init
+
+# add the theme
+export URL=https://github.com/ckuelker/pankyll-theme-rankle
+git submodule add -b master $URL themes/pankyll-theme-rankle
+git submodule init
+
+# update the submodules of the submodules
+git submodule update --remote
+git submodule update --init --recursive </code></pre>
+<blockquote>
+<p>Copy over the <code>log.yaml</code> from one of the theme example repositories.</p>
+</blockquote>
+<pre class="shell"><code>export HOST=raw.githubusercontent.com
+wget https://$HOST/ckuelker/pankyll-theme-rankle-example/master/log.yaml</code></pre>
+<blockquote>
+<p>To kick start the configuration copy over the <code>cfg.yaml</code> and change it.</p>
+</blockquote>
+<pre class="shell"><code>wget https://$HOST/ckuelker/pankyll-theme-rankle-example/master/cfg.yaml</code></pre>
+<blockquote>
+<p>Change the configuration to match you site. The following is somewhat a minimal example for the <a href="/en_US/Pankyll-Themes/pankyll-theme-rankle.html">Rankle</a> theme.</p>
+</blockquote>
+<pre class="yaml"><code># 0: default values
+default:
+    page_type:         doc
+    keyword_page_type: keyword
+    index_list_type:   list
+    l10n_locale:       en_US   # Feature 2: Localization
+    pdf_create:        True
+
+# 1. Global site parameters
+site:
+  url:         /                     # URL prefix - mandatory (trailing slash)
+  title:       My Site               # string     - mandatory (fallback)
+  content_dir: content               # directory  - mandatory
+  public_dir:  public                # directory  - mandatory
+  themes_dir:  themes                # directory  - mandatory
+  theme_name:  pankyll-theme-rankle  # directory  - mandatory
+
+# 2. Feature: Internationalization
+locales:
+      en_US: English
+
+# 4. Feature: Home
+home:
+    en_US:
+        text: Pankyll  # home_text
+        url:  en_US    # home_url
+
+# 5. Feature: Navigation
+navigation:
+    en_US:
+        - link:
+            text: Documentation
+            url:  en_US/
+
+# 6. Feature: Table Of Contents
+toc:
+    en_US:
+        text: Table Of Contents # alternative: Contents
+
+# 7. Feature: Keywords
+keywords:
+    - categories
+    - tags
+
+categories:
+    en_US:
+        text: Categories
+        url:  en_US/Categories/
+
+tags:
+    en_US:
+        text: Tags
+        url:  en_US/Tags/
+
+# 8. Feature: More-Menu (not used by newspaper theme)
+more:
+    en_US:
+        - link:
+            text: Categories
+            url:  en_US/Categories/
+        - link:
+            text: Tags
+            url:  en_US/Tags/
+
+# 9.  Feature: Site Description
+description:
+    en_US:
+        text: My Site
+
+# 10. Feature: Footer
+footer_left:
+    en_US:
+        1:
+            tip: Mailing List
+            font: fa # font awesome solid
+            icon: envelope
+            url:  https://example.org/mail
+footer_middle:
+    en_US:
+        1:
+            tip:  Pankyll
+            font: fab
+            icon: python
+            url:  https://github.com/ckuelker/pankyll
+footer_right:
+    en_US:
+        1:
+            tip: Git Home # Rankle: tooltips
+            font: fab
+            icon: github
+            url:  https://github.com/ckuelker/pankyll-theme-rankle-example
+footer:
+    en_US:
+        - text: © 2020 by Me, All Rights Reserved</code></pre>
+<blockquote>
+<p>The first page should go into the content directory: <code>content/en_US/index.md</code>. Make sure the highest heading level is 2 (aka 2 ##).</p>
+</blockquote>
+<pre class="markdown"><code>---
+title: Welcome to My Site
+type: title
+keywords:
+  - My Site
+categories:
+  - My Site
+tags:
+  - Welcome
+description: My new site
+
+---
+
+Welcome to my new web site.
+
+## Important Information
+...</code></pre>
+<p>The <a href="https://yaml.org/">YAML</a> front matter is needed to define the default type of the page. In this case it is <code>type: title</code>. The rest is optional. To create the web site run the <code>pankyll</code> command inside the project directory.</p>
+<pre class="shell"><code>...
+Command line starting Pankyll v0.1.0
+Pankyll v0.1.0
+
+Objects                        | Count
+-------------------------------|------------
+Markdown source files total    | 1
+Markdown source files existing | 1
+Markdown source files new      | 0
+Markdown files total           | 3
+Markdown files existing        | 3
+Markdown files new             | 2
+Pandoc WARNINGS                | 5
+PDF                            | 5
+PDF skipped                    | 0
+PDF processed                  | 0
+PDF excluded (index)           | 5
+HTML                           | 5
+HTML processed                 | 5
+HTML skipped                   | 0
+Content git repositories       | 0</code></pre>
+<p>The result inside the <code>public</code> directory should be copied to the web server. Usually the web server needs to be configured to server the file from the directory <code>en_US</code>. If you want to test it locally you should copy in an <a href="https://en.wikipedia.org/wiki/HTML">HTML</a> file that redirects to the default language root. You can use the following command to fire up a local development web server.</p>
+<pre class="shell"><code>export HOST=raw.githubusercontent.com
+export REPO=pankyll-theme-rankle-example
+cd public
+wget https://$HOST/ckuelker/$REPO/master/static/index.html
+python3 -m http.server 8000</code></pre>
+
+            
+    
+
+
+
+
+            
+
+
+            
+                <hr>
+    <ul class="status">
+        
+        
+  <li>Last modified (via git): April 26, 2020</li>
+
+
+        
+    
+    <li><a href="https://github.com/ckuelker/pankyll-documentation/commit/eff4df11a0e1a05462091fe2036feba1b8c9bfb5">add description (eff4df11)</a></li>
+    
+
+        <li>650 words</li>
+        <li><a class="rankle-link" href="/en_US/Documentation/creating-a-pankyll-site.pdf">🡻 PDF</a></li>
+
+    </ul>
+
+            
+          </div>
+        </div>
+      </section>
+
+
+      <div class="rankle-sidebar-1 hg-sidebar">
+        <div class="col-sm-12 col-md-12 col-lg-12 td-sidebar bar-toc bar-left">
+                 
+       <ul class="td-sidebar-nav-toc-tile">
+         <li class"td-sidebar-nav-toc-tile-item">Creating A Pankyll Site</li>
+       
+         
+
+       
+       </ul>
+       
+       
+
+       
+        </div>
+      </div>
+
+
+      <div class="col-sm-12 col-md-12 col-lg-2 order-lg-3 bar-tools bar-right">
+        <div class="rankle-sidebar-2 hg-sidebar">
+          <!-- RIGHT SIDE TOOLS -->
+
+
+      <div class="wrapper">
+        <ul>
+
+          <li>
+            <input type="checkbox" id="list-item-1">
+            <label for="list-item-1" class="first">Download</label>
+            <ul>
+              <li><a href="/en_US/Documentation/creating-a-pankyll-site.pdf">🡻 PDF</a></li>
+            </ul>
+          </li>
+
+
+
+    
+        
+    
+        
+    
+
+
+
+
+
+    
+          <li>
+            <input type="checkbox" id="list-item-2">
+            <label for="list-item-2" class="first">Git</label>
+            <ul>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/blob/master/en_US/Documentation/creating-a-pankyll-site.md"><i class="fab fa-github fa-fw"></i>View latest on Github</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/edit/master/en_US/Documentation/creating-a-pankyll-site.md"><i class="fa fa-edit fa-fw"></i>Edit this page</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/commit/eff4df11a0e1a05462091fe2036feba1b8c9bfb5"><i class="fab fa-git-alt fa-fw"></i>View commit on Github</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/issues/new?title=Documentation"><i class="fa fa-book fa-fw"></i>Create documentation issue</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/issues/new"><i class="fas fa-tasks fa-fw"></i>Create project issue</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <footer>
+      <footer class="bg-dark row d-print-none footer">
+  <div class="footer container-fluid mx-sm5">
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <div class="container-fluid" style="margin-top:5px">
+        <div class="row">
+          <div class="col-sm-2 footer-left">
+            
+            <ul class="list-inline mb-0 footer-list">
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Mailing List" data-original-title="Mailing List">
+               <a class="text-white footer-link" target="_blank" href="https://example.org/mail">
+                 <i class="fa fa-envelope"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Twitter" data-original-title="Twitter">
+               <a class="text-white footer-link" target="_blank" href="https://example.org/mail">
+                 <i class="fab fa-twitter"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Stack Overflow" data-original-title="Stack Overflow">
+               <a class="text-white footer-link" target="_blank" href="https://example.org/mail">
+                 <i class="fab fa-stack-overflow"></i>
+               </a>
+              </li>
+            
+            </ul>
+            
+          </div>
+          <div class="col-sm-8 footer-mid">
+            
+            <ul class="list-inline mb-0 footer-list">
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Pankyll" data-original-title="Pankyll">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker/pankyll">
+                 <i class="fab fa-python"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Rankle" data-original-title="Rankle">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker/pankyll-theme-rankle">
+                 <i class="fab fa-html5"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Example" data-original-title="Example">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker/pankyll-theme-rankle-example">
+                 <i class="fab fa-git-alt"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Developer" data-original-title="Developer">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker">
+                 <i class="fa fa-user-circle"></i>
+               </a>
+              </li>
+            
+            </ul>
+            
+            <ul class="footer-list footer-middle-list">
+              <li class="footer-item footer-middle-item site-update-last-item">Last site update: 2020-04-27</li>
+            
+              <li class="footer-item footer-middle-item">© 2020 Christian Külker, All Rights Reserved</li>
+            
+              <li class="footer-item footer-middle-item">Content license: <a class="rankle-link-dark" href="/en_US/License">GNU Free Document License v1.3</a></li>
+            
+            <li class="footer-list-item footer-middle-list-item">
+              <a class="rankle-link-dark footer-link footer-middle-link generator-link" href="https://github.com/ckuelker/pankyll">Pankyll v0.1.0</a>
+              theme <a class="rankle-link-dark theme-link" href="https://github.com/ckuelker/pankyll-theme-rankle">pankyll-theme-rankle v0.1.0</a>
+            </li>
+            </ul>
+
+          </div>
+         <div class="col-sm-2 footer-right">
+            
+            <ul class="list-inline mb-0 footer-list">
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Git Home" data-original-title="Git Home">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker/pankyll-theme-rankle-example">
+                 <i class="fab fa-github"></i>
+               </a>
+              </li>
+            
+            </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+</script>
+<script src="/js/rankle.js"></script>
+
+
+    </footer>
+  </body>
+</html>

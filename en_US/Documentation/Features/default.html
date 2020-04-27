@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang=en_US class=no-js>
+  <head>
+    <meta name=type content="doc">
+          <title>Default</title>
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name=generator content="Pankyll v0.1.0">
+
+      <meta name="description" content="Default feature documentation">
+
+
+      <meta name="keyword" content="Default Values">
+
+      <meta property="og:title" content="Default">
+      <meta property="og:description" content="Default feature documentation">
+      <meta property="og:type" content="article">
+      <meta property="og:url" content="/en_US/Documentation/Features/default.md">
+
+      <meta property="article:published_time" content="2020-04-27 18:39:14 ">
+
+
+      <meta property="article:modified_time" content="2020-04-27 18:39:14 ">
+
+      <meta property="og:site_name" content="Pankyll">
+      <meta itemprop=name content="Default">
+      <meta itemprop=description content="Default feature documentation">
+
+      <meta itemprop=datePublished content="2020-04-27 18:39:14 ">
+
+
+      <meta itemprop=dateModified content="2020-04-27 18:39:14 ">
+
+
+      <meta itemprop=wordCount content="780">
+
+      <meta itemprop=keywords content="cheat sheet,">
+      <meta name=twitter:card content="summary">
+      <meta name=twitter:title content="Default">
+      <meta name=twitter:description content="Default feature documentation">
+
+
+
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/railscasts.min.css">
+
+      <link rel="stylesheet" href="/css/all.min.css">
+      <link rel="stylesheet" href="/css/rankle.css">
+
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+
+  </head>
+  <body class="rankle">
+
+
+    <header>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="/">Pankyll</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    
+    <ul class="navbar-nav mt-2 mt-lg-0">
+        
+        <li class="nav-item mr-4 mb-2 mb-lg-0 ">
+           <a class="nav-link pankyll-nav-topic" href="/en_US/About/"><span class="pankyll-nav-topic">About</span></a>
+        </li>
+        
+        <li class="nav-item mr-4 mb-2 mb-lg-0 active">
+           <a class="nav-link pankyll-nav-topic" href="/en_US/Documentation/"><span class="pankyll-nav-topic">Documentation</span></a>
+        </li>
+        
+        <li class="nav-item mr-4 mb-2 mb-lg-0 ">
+           <a class="nav-link pankyll-nav-topic" href="/en_US/Pankyll-Themes/"><span class="pankyll-nav-topic">Pankyll Themes</span></a>
+        </li>
+        
+        <li class="nav-item mr-4 mb-2 mb-lg-0 ">
+           <a class="nav-link pankyll-nav-topic" href="/en_US/Example-Sites/"><span class="pankyll-nav-topic">Example Sites</span></a>
+        </li>
+        
+    </ul>
+    
+    
+    <li class="nav-item dropdown d-none d-lg-block">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="pankyll-nav-topic">
+                More
+            </span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        
+            <a class="dropdown-item" href="/en_US/Categories/">Categories</a>
+        
+            <a class="dropdown-item" href="/en_US/Tags/">Tags</a>
+        
+        </div>
+    </li>
+
+    
+  </div>
+</nav>
+    </header>
+
+
+    <div class="rankle-body">
+
+      <section class="rankle-content">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 order-lg-2">
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+    <ol class="breadcrumb spb-1">
+    
+        <li class="breadcrumb-item">
+            <a href="/en_US/Documentation/">Documentation</a>
+        </li>
+    
+        <li class="breadcrumb-item">
+            <a href="/en_US/Documentation/Features/">Features</a>
+        </li>
+    
+        <li class="breadcrumb-item active">
+            <a href="/en_US/Documentation/Features/default.html">Default</a>
+        </li>
+    
+    </ol>
+</nav>
+            
+    <div class="title">
+        <h1 id="title">Default</h1>
+        <h3 id="author">Christian Külker</h3>
+        
+        <h3 id="author">2020-04-26</h3>
+    </div>
+
+            <p>Some values need to have pre-defined values, so called default values. <a href="https://www.pankyll.org/">Pankyll</a> explicitly supports for some values that this values are set to a default value for the whole web site.</p>
+<h2 id="site-cfg.yaml-example">Site cfg.yaml Example</h2>
+<pre class="yaml"><code>default:
+    page_type:         doc
+    keyword_page_type: keyword
+    index_list_type:   list
+    l10n_locale:       en_US
+    pdf_create:        False
+    css_local:         False
+    js_local:          False</code></pre>
+<h3 id="page_type">page_type</h3>
+<p>Every theme has different kind of web pages in its template layout directory. Usually the front matter defined with the key <code>page_type:</code> the kind of template to be used. For example the <code>page_type: doc</code> uses the <code>themes/NAME/layouts/doc/index.html</code> as a template to render the page. (Replace <code>NAME</code> with name of the used <a href="/en_US/Pankyll-Themes/">theme</a>. There are cases in which almost all pages of a given web site are of one type. Rather forcing to add a <code>page_type:</code> in every page front matter, this default value sets the page type for pages without a <code>page_type:</code> in the front matter. The possible values are dependent on the theme. Every theme can define as many page types as the theme wants.</p>
+<h3 id="example-values-for-3-themes">Example Values For 3 Themes</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Theme</th>
+<th>Page Types</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>newspaper</td>
+<td>title, keyword, doc, blog</td>
+</tr>
+<tr class="even">
+<td>rankle</td>
+<td>title, keyword, doc, blog</td>
+</tr>
+<tr class="odd">
+<td>simplicissimus</td>
+<td>title, keyword, doc, blog</td>
+</tr>
+</tbody>
+</table>
+<h3 id="keyword_page_type">keyword_page_type</h3>
+<p>Similar to the <code>page_type</code> one can set a default type for keyword pages. Usually the <code>page_type</code> is set for <code>index.md</code> files. While also for every keyword, like <strong>tags</strong> or <strong>cotegories</strong> also <code>index.md</code> files are created automatically, this files can have a different default type determined by <code>keyword_page_type:</code>. This is because the page of a keyword usually need to have different kind of lists to show all keywords, that are not practically on <code>title</code> pages for example. It is possible to set the value to the all values of <code>page_type</code>, see above section for details.</p>
+<h3 id="index_list_type">index_list_type</h3>
+<p>On some pages you would like to have an automatically generated link list of sibling pages. This can be done in two ways. (1) creating a directory without and <code>index.md</code> page. In this case the <code>index.md</code> page will be created with the default list type specified by <code>index_list_type:</code>. (2) You create an <code>index.md</code> file or any other file inside a directory containing sibling pages and define <code>list: True</code> or <code>cards: True</code> inside the front matter. Also in cases a list will be printed if this option matches the <code>index_list_type:</code> value. For now <a href="https://www.pankyll.org/">Pankyll</a> supports 3 kind of listings, of which only two can be used as values: either ’<code>list</code> or <code>cards</code>. A theme can but do not need to support any list.</p>
+<h3 id="siblings">Siblings</h3>
+<ul>
+<li>list - simple list for title, doc, and blog pages</li>
+<li>cards - a different kind of layout list for title, doc and blog pages</li>
+</ul>
+<h3 id="keywords">Keywords</h3>
+<ul>
+<li>keyword - a special list for keywords</li>
+</ul>
+<h2 id="l10n_locale">l10n_locale</h2>
+<p>As <a href="https://www.pankyll.org/">Pankyll</a> support multilinugal pages, it is assumed that a page has at least one language. The key <code>l10n_locale:</code> require the name of the locale, that is basically the top level directory of your content folder. If you would like to create a German page your content directory might look like this <code>content/de_DE/index.md</code>, than <code>de_DE</code> is the default locale and you should set <code>l10n_locale: de_DE</code>. If you would like to create an English page your content directory might look like this <code>content/en_US/index.md</code>, than <code>en_US</code> is the default locale and you should set <code>l10n_locale: en_US</code>.</p>
+<h2 id="pdf_create">pdf_create</h2>
+<p><a href="https://www.pankyll.org/">Pankyll</a> supports the creation of <a href="https://en.wikipedia.org/wiki/PDF">PDF</a> version if the <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> page via <a href="https://pandoc.org/">Pandoc</a>. Some pages would like to have a link pointing to download the <a href="https://en.wikipedia.org/wiki/PDF">PDF</a> version of a page, some sites would not. Also when developing a new web site, the creation of <a href="https://en.wikipedia.org/wiki/PDF">PDF</a> pages takes time. To speed up the development, the creation can be globally enabled or disabled for the site. As a remark, for now <a href="https://www.pankyll.org/">Pankyll</a> do not create <a href="https://en.wikipedia.org/wiki/PDF">PDF</a> documents for <code>index.md</code> pages. Just use a different page name for now. To enable <a href="https://en.wikipedia.org/wiki/PDF">PDF</a> creation set the key to <code>True</code> like this: <code>pdf_create: True</code> and to disable it to: <code>pdf_create: False</code>. Keep in mind that <a href="https://yaml.org/">YAML</a> is case sensitive. <code>pdf_create: true</code> might not work.</p>
+<h2 id="css_local">css_local</h2>
+<p>Some themes (or your site) might offer the delivery of <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a> files locally as in contrast to point to some arbitrary third party web servers. There are advantages and disadvantages for this. <code>css_local: True</code> might deliver some CSS locally from some themes or sites, while <code>css_local: False</code> do not. You have to look into your theme to see if it supports it.</p>
+<h3 id="example-theme-support-template-snippet">Example Theme Support Template Snippet</h3>
+<pre class="html"><code>{% if cfg.default.css_local %}
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/hljs/highlight-default.min.css&quot;&gt;
+{% else %}
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;//SOME_SERVER/styles/default.min.css&quot;&gt;
+{% endif %}</code></pre>
+<p>For this to work locally you have (1) copy <code>highlight-default.min.css</code> (obtained from some web site) to <code>themes/NAME/static/css/highlight-default.min.css</code> and (2) set <code>css_local: True</code> in <code>cfg.yaml</code>.</p>
+<h2 id="js_local">js_local</h2>
+<p>This option is basically the same as <code>css_local</code>, but just for <a href="https://en.wikipedia.org/wiki/JavaScript">javascript</a> files. See section <a href="#css_local">css_local</a> for details.</p>
+
+            
+    
+
+
+
+
+            
+
+
+            
+                <hr>
+    <ul class="status">
+        
+        
+  <li>Last modified (via git): April 27, 2020</li>
+
+
+        
+    
+    <li><a href="https://github.com/ckuelker/pankyll-documentation/commit/1d133fc1a19082a005b232ac1d4833513ef98b65">shorten title (1d133fc1)</a></li>
+    
+
+        <li>780 words</li>
+        <li><a class="rankle-link" href="/en_US/Documentation/Features/default.pdf">🡻 PDF</a></li>
+
+    </ul>
+
+            
+          </div>
+        </div>
+      </section>
+
+
+      <div class="rankle-sidebar-1 hg-sidebar">
+        <div class="col-sm-12 col-md-12 col-lg-12 td-sidebar bar-toc bar-left">
+                 
+       <ul class="td-sidebar-nav-toc-tile">
+         <li class"td-sidebar-nav-toc-tile-item">Default</li>
+       
+         <ul>
+<li><a href="#site-cfg.yaml-example">Site cfg.yaml Example</a>
+<ul>
+<li><a href="#page_type">page_type</a></li>
+<li><a href="#example-values-for-3-themes">Example Values For 3 Themes</a></li>
+<li><a href="#keyword_page_type">keyword_page_type</a></li>
+<li><a href="#index_list_type">index_list_type</a></li>
+<li><a href="#siblings">Siblings</a></li>
+<li><a href="#keywords">Keywords</a></li>
+</ul></li>
+<li><a href="#l10n_locale">l10n_locale</a></li>
+<li><a href="#pdf_create">pdf_create</a></li>
+<li><a href="#css_local">css_local</a>
+<ul>
+<li><a href="#example-theme-support-template-snippet">Example Theme Support Template Snippet</a></li>
+</ul></li>
+<li><a href="#js_local">js_local</a></li>
+</ul>
+
+       
+       </ul>
+       
+       
+
+       
+        </div>
+      </div>
+
+
+      <div class="col-sm-12 col-md-12 col-lg-2 order-lg-3 bar-tools bar-right">
+        <div class="rankle-sidebar-2 hg-sidebar">
+          <!-- RIGHT SIDE TOOLS -->
+
+
+      <div class="wrapper">
+        <ul>
+
+          <li>
+            <input type="checkbox" id="list-item-1">
+            <label for="list-item-1" class="first">Download</label>
+            <ul>
+              <li><a href="/en_US/Documentation/Features/default.pdf">🡻 PDF</a></li>
+            </ul>
+          </li>
+
+
+
+    
+        
+            
+          <li>
+           <input type="checkbox" id="list-item-2">
+            <label for="list-item-2" class="first">Categories</label>
+              <ul>
+            
+                
+                
+                <li><a class="categories-link" href="/en_US/Categories//Feature.html">Feature</a></li>
+            
+              </ul>
+          </li>
+        
+    
+        
+            
+          <li>
+           <input type="checkbox" id="list-item-3">
+            <label for="list-item-3" class="first">Tags</label>
+              <ul>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//CSS.html">CSS</a></li>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//Javascript.html">Javascript</a></li>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//Markdown.html">Markdown</a></li>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//Pandoc.html">Pandoc</a></li>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//Pankyll.html">Pankyll</a></li>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//PDF.html">PDF</a></li>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//Theme.html">Theme</a></li>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//YAML.html">YAML</a></li>
+            
+              </ul>
+          </li>
+        
+    
+
+
+
+
+
+    
+          <li>
+            <input type="checkbox" id="list-item-4">
+            <label for="list-item-4" class="first">Git</label>
+            <ul>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/blob/master/en_US/Documentation/Features/default.md"><i class="fab fa-github fa-fw"></i>View latest on Github</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/edit/master/en_US/Documentation/Features/default.md"><i class="fa fa-edit fa-fw"></i>Edit this page</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/commit/1d133fc1a19082a005b232ac1d4833513ef98b65"><i class="fab fa-git-alt fa-fw"></i>View commit on Github</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/issues/new?title=Documentation"><i class="fa fa-book fa-fw"></i>Create documentation issue</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/issues/new"><i class="fas fa-tasks fa-fw"></i>Create project issue</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <footer>
+      <footer class="bg-dark row d-print-none footer">
+  <div class="footer container-fluid mx-sm5">
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <div class="container-fluid" style="margin-top:5px">
+        <div class="row">
+          <div class="col-sm-2 footer-left">
+            
+            <ul class="list-inline mb-0 footer-list">
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Mailing List" data-original-title="Mailing List">
+               <a class="text-white footer-link" target="_blank" href="https://example.org/mail">
+                 <i class="fa fa-envelope"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Twitter" data-original-title="Twitter">
+               <a class="text-white footer-link" target="_blank" href="https://example.org/mail">
+                 <i class="fab fa-twitter"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Stack Overflow" data-original-title="Stack Overflow">
+               <a class="text-white footer-link" target="_blank" href="https://example.org/mail">
+                 <i class="fab fa-stack-overflow"></i>
+               </a>
+              </li>
+            
+            </ul>
+            
+          </div>
+          <div class="col-sm-8 footer-mid">
+            
+            <ul class="list-inline mb-0 footer-list">
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Pankyll" data-original-title="Pankyll">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker/pankyll">
+                 <i class="fab fa-python"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Rankle" data-original-title="Rankle">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker/pankyll-theme-rankle">
+                 <i class="fab fa-html5"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Example" data-original-title="Example">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker/pankyll-theme-rankle-example">
+                 <i class="fab fa-git-alt"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Developer" data-original-title="Developer">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker">
+                 <i class="fa fa-user-circle"></i>
+               </a>
+              </li>
+            
+            </ul>
+            
+            <ul class="footer-list footer-middle-list">
+              <li class="footer-item footer-middle-item site-update-last-item">Last site update: 2020-04-27</li>
+            
+              <li class="footer-item footer-middle-item">© 2020 Christian Külker, All Rights Reserved</li>
+            
+              <li class="footer-item footer-middle-item">Content license: <a class="rankle-link-dark" href="/en_US/License">GNU Free Document License v1.3</a></li>
+            
+            <li class="footer-list-item footer-middle-list-item">
+              <a class="rankle-link-dark footer-link footer-middle-link generator-link" href="https://github.com/ckuelker/pankyll">Pankyll v0.1.0</a>
+              theme <a class="rankle-link-dark theme-link" href="https://github.com/ckuelker/pankyll-theme-rankle">pankyll-theme-rankle v0.1.0</a>
+            </li>
+            </ul>
+
+          </div>
+         <div class="col-sm-2 footer-right">
+            
+            <ul class="list-inline mb-0 footer-list">
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Git Home" data-original-title="Git Home">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker/pankyll-theme-rankle-example">
+                 <i class="fab fa-github"></i>
+               </a>
+              </li>
+            
+            </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+</script>
+<script src="/js/rankle.js"></script>
+
+
+    </footer>
+  </body>
+</html>
