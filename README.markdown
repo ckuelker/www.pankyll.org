@@ -15,6 +15,7 @@ This document describes the technical aspects of the repository
 
 | Version | Date       | Author           | Notes                             |
 | ------- | ---------- | ---------------- | --------------------------------- |
+| 0.1.1   | 2020-04-28 | Christian Külker | Fix theme license                 |
 | 0.1.0   | 2020-04-27 | Christian Külker | Initial release                   |
 
 
@@ -25,7 +26,8 @@ This document describes the technical aspects of the repository
 ## License And Copyright
 
 This repository is a merge from different sources. All files are copyrighted
-and licensed by their authors.
+and licensed by their authors. Please refer to the source code repository.
+The information for this external repositories is for courtesy only
 
 ### pankyll-documentation
 
@@ -33,13 +35,15 @@ and licensed by their authors.
 * License: GNU FDL 1.3 or later
 * Directory: `en_US`
 * Files: `index.html`
+* Repository: https://github.com/ckuelker/pankyll-documentation
 
 ### pankyll-theme-rankle
 
 * Copyright: Christian Külker
-* License: GNU FDL 1.3 or later
+* License: GNU GPL 3.0 or later
 * Directory: `en_US`
 * Files: `css/rankle.css` `js/rankle.js`
+* Repository: https://github.com/ckuelker/pankyll-theme-rankle
 
 ### Font Awesome
 
@@ -47,18 +51,21 @@ and licensed by their authors.
  * License: https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * File: `css`
  * Directory: `webfonts`
+ * Repository: https://github.com/FortAwesome/Font-Awesome.git
 
 ### Font Lato
 
  * Copyright:  2015 HAKGER
  * License: MIT
  * Directory: `font/lato`
+ * Repository: https://github.com/hakger/latolatin-webfont.git
 
 ### Font Roboto-Sans
 
  * Author: [Christian Robertson](https://plus.google.com/110879635926653430880/about)
  * License: Apache 2.0
  * Directory: `font/roboto-slab`
+ * Repository: https://github.com/choffmeister/roboto-fontface-bower.git
 
 
 ## DISCLAIMER OF WARRANTY
