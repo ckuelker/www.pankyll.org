@@ -17,22 +17,22 @@
       <meta property="og:type" content="article">
       <meta property="og:url" content="/en_US/Documentation/creating-pankyll-theme-skeleton.md">
 
-      <meta property="article:published_time" content="2020-04-21 18:34:01 ">
+      <meta property="article:published_time" content="2020-04-28 14:48:37 ">
 
 
-      <meta property="article:modified_time" content="2020-04-21 18:34:01 ">
+      <meta property="article:modified_time" content="2020-04-28 14:48:37 ">
 
       <meta property="og:site_name" content="Pankyll">
       <meta itemprop=name content="Creating A Pankyll Theme Skeleton">
       <meta itemprop=description content="Create a Example Skeleton and show how to use git sub-modules">
 
-      <meta itemprop=datePublished content="2020-04-21 18:34:01 ">
+      <meta itemprop=datePublished content="2020-04-28 14:48:37 ">
 
 
-      <meta itemprop=dateModified content="2020-04-21 18:34:01 ">
+      <meta itemprop=dateModified content="2020-04-28 14:48:37 ">
 
 
-      <meta itemprop=wordCount content="270">
+      <meta itemprop=wordCount content="160">
 
       <meta itemprop=keywords content="cheat sheet,">
       <meta name=twitter:card content="summary">
@@ -134,11 +134,11 @@
         <h1 id="title">Creating A Pankyll Theme Skeleton</h1>
         <h3 id="author">Christian Külker</h3>
         <h3 id="version">0.1.2</h3>
-        <h3 id="author">2020-04-21</h3>
+        <h3 id="author">2020-04-27</h3>
     </div>
 
             <blockquote>
-<p>This document shows how to create an example <a href="https://git-scm.com/">git</a> repository for a <a href="https://www.pankyll.org/">Pankyll</a> theme with the example of the <a href="https://www.pankyll.org/">Pankyll</a> <a href="/en_US/Pankyll-Themes/pankyll-theme-newspaper.html">Newspaper</a> theme.</p>
+<p>This document shows how to create an example <a href="https://de.wikipedia.org/wiki/Git">git</a> repository for a <a href="https://www.pankyll.org">Pankyll</a> theme with the example of the <a href="https://www.pankyll.org">Pankyll</a> [Newspaper] theme.</p>
 </blockquote>
 <h2 id="creating-the-simplicissimus-skeleton">Creating the Simplicissimus Skeleton</h2>
 <pre class="shell"><code>cd pankyll-theme-simplicissimus-example
@@ -146,49 +146,31 @@ git init
 
 # pandoc
 git submodule add -b master https://github.com/ckuelker/pankyll-pandoc pandoc
-Cloning into &#39;/home/c/g/github.com-ckuelker/pankyll-theme-simplicissimus-example/pandoc&#39;...
-remote: Enumerating objects: 14, done.
-remote: Counting objects: 100% (14/14), done.
-remote: Compressing objects: 100% (11/11), done.
-remote: Total 14 (delta 1), reused 14 (delta 1), pack-reused 0
-Unpacking objects: 100% (14/14), done.
-
 git submodule init
 
 # content
 export URL=https://github.com/ckuelker/pankyll-documentation
 git submodule add -b master $URL content
-Cloning into &#39;/home/c/g/github.com-ckuelker/pankyll-theme-simplicissimus-example/content&#39;...
-remote: Enumerating objects: 226, done.
-remote: Counting objects: 100% (226/226), done.
-remote: Compressing objects: 100% (152/152), done.
-remote: Total 226 (delta 132), reused 159 (delta 65), pack-reused 0
-Receiving objects: 100% (226/226), 52.46 KiB | 0 bytes/s, done.
-Resolving deltas: 100% (132/132), done.
-
 git submodule init
 
 # theme
 mkdir themes
 export URL=https://github.com/ckuelker/pankyll-theme-simplicissimus
 git submodule add -b master $URL themes/pankyll-theme-simplicissimus
-Cloning into &#39;/home/c/g/github.com-ckuelker/pankyll-theme-simplicissimus-example/themes/pankyll-theme-simplicissimus&#39;...
-remote: Enumerating objects: 28, done.
-remote: Counting objects: 100% (28/28), done.
-remote: Compressing objects: 100% (19/19), done.
-remote: Total 28 (delta 3), reused 28 (delta 3), pack-reused 0
-Unpacking objects: 100% (28/28), done.
-
 git submodule init
 
 mkdir static
 </code></pre>
+<blockquote>
 <p>Some files need to be created:</p>
+</blockquote>
 <ul>
 <li>cfg.yaml</li>
 <li>log.yaml</li>
 </ul>
+<blockquote>
 <p>The <code>Makefile</code> is optional.</p>
+</blockquote>
 <h2 id="updating-git-sub-modules">Updating Git Sub-Modules</h2>
 <pre class="bash"><code>git submodule update --init --recursive
 git submodule update --remote
@@ -215,18 +197,24 @@ git submodule update --remote</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
+<td>0.1.3</td>
+<td>2020-04-27</td>
+<td>Christian Külker</td>
+<td>cleanup links, git output</td>
+</tr>
+<tr class="even">
 <td>0.1.2</td>
 <td>2020-04-21</td>
 <td>Christian Külker</td>
 <td>add git output</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>0.1.1</td>
 <td>2020-04-09</td>
 <td>Christian Külker</td>
 <td>add links</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>0.1.0</td>
 <td>2020-03-22</td>
 <td>Christian Külker</td>
@@ -249,15 +237,15 @@ git submodule update --remote</code></pre>
     <ul class="status">
         
         
-  <li>Last modified (via git): April 21, 2020</li>
+  <li>Last modified (via git): April 28, 2020</li>
 
 
         
     
-    <li><a href="https://github.com/ckuelker/pankyll-documentation/commit/0dfd7fb13158957ff17205b2218d9d55ccc8d912">fix link Pankyll-Theme-Examples (0dfd7fb1)</a></li>
+    <li><a href="https://github.com/ckuelker/pankyll-documentation/commit/e7779b0a06a6b87b70e34c553e08cee404e4b871">change Pankyll links to local links (e7779b0a)</a></li>
     
 
-        <li>270 words</li>
+        <li>160 words</li>
         <li><a class="rankle-link" href="/en_US/Documentation/creating-pankyll-theme-skeleton.pdf">🡻 PDF</a></li>
 
     </ul>
@@ -316,6 +304,27 @@ git submodule update --remote</code></pre>
         
     
         
+            
+          <li>
+           <input type="checkbox" id="list-item-2">
+            <label for="list-item-2" class="first">Tags</label>
+              <ul>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//Pankyll Skeleton.html">Pankyll Skeleton</a></li>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//Git.html">Git</a></li>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//Pankyll.html">Pankyll</a></li>
+            
+              </ul>
+          </li>
+        
     
 
 
@@ -324,12 +333,12 @@ git submodule update --remote</code></pre>
 
     
           <li>
-            <input type="checkbox" id="list-item-2">
-            <label for="list-item-2" class="first">Git</label>
+            <input type="checkbox" id="list-item-3">
+            <label for="list-item-3" class="first">Git</label>
             <ul>
               <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/blob/master/en_US/Documentation/creating-pankyll-theme-skeleton.md"><i class="fab fa-github fa-fw"></i>View latest on Github</a></li>
               <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/edit/master/en_US/Documentation/creating-pankyll-theme-skeleton.md"><i class="fa fa-edit fa-fw"></i>Edit this page</a></li>
-              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/commit/0dfd7fb13158957ff17205b2218d9d55ccc8d912"><i class="fab fa-git-alt fa-fw"></i>View commit on Github</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/commit/e7779b0a06a6b87b70e34c553e08cee404e4b871"><i class="fab fa-git-alt fa-fw"></i>View commit on Github</a></li>
               <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/issues/new?title=Documentation"><i class="fa fa-book fa-fw"></i>Create documentation issue</a></li>
               <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/issues/new"><i class="fas fa-tasks fa-fw"></i>Create project issue</a></li>
             </ul>
@@ -427,7 +436,7 @@ git submodule update --remote</code></pre>
             </ul>
             
             <ul class="footer-list footer-middle-list">
-              <li class="footer-item footer-middle-item site-update-last-item">Last site update: 2020-04-27</li>
+              <li class="footer-item footer-middle-item site-update-last-item">Last site update: 2020-04-28</li>
             
               <li class="footer-item footer-middle-item">© 2020 Christian Külker, All Rights Reserved</li>
             
