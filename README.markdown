@@ -15,6 +15,7 @@ This document describes the technical aspects of the repository
 
 | Version | Date       | Author           | Notes                             |
 | ------- | ---------- | ---------------- | --------------------------------- |
+| 0.1.2   | 2020-05-13 | Christian Külker | Favicon, Documentation 0.1.3      |
 | 0.1.1   | 2020-04-28 | Christian Külker | Fix theme license                 |
 | 0.1.0   | 2020-04-27 | Christian Külker | Initial release                   |
 
