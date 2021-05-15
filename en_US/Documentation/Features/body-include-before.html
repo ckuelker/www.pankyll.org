@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang=en_US class=no-js>
+  <head>
+    <meta name=type content="doc">
+          <title>Include Before</title>
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name=generator content="Pankyll v0.1.0">
+
+      <meta name="description" content="Include Before feature documentation">
+
+
+      <meta name="keyword" content="Include Before">
+
+      <meta property="og:title" content="Include Before">
+      <meta property="og:description" content="Include Before feature documentation">
+      <meta property="og:type" content="article">
+      <meta property="og:url" content="/en_US/Documentation/Features/body-include-before.md">
+
+      <meta property="article:published_time" content="2021-05-14 09:03:14 ">
+
+
+      <meta property="article:modified_time" content="2021-05-14 09:03:14 ">
+
+      <meta property="og:site_name" content="Pankyll">
+      <meta itemprop=name content="Include Before">
+      <meta itemprop=description content="Include Before feature documentation">
+
+      <meta itemprop=datePublished content="2021-05-14 09:03:14 ">
+
+
+      <meta itemprop=dateModified content="2021-05-14 09:03:14 ">
+
+
+      <meta itemprop=wordCount content="69">
+
+      <meta itemprop=keywords content="cheat sheet,">
+      <meta name=twitter:card content="summary">
+      <meta name=twitter:title content="Include Before">
+      <meta name=twitter:description content="Include Before feature documentation">
+
+
+
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/railscasts.min.css">
+
+      
+      <link rel="stylesheet" href="/css/all.min.css">
+      <link rel="stylesheet" href="/css/rankle.css">
+
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+
+
+
+<link rel="shortcut icon" href="/i/favicon.ico">
+  </head>
+  <body class="rankle">
+
+
+    <header>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="/">Pankyll</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    
+    <ul class="navbar-nav mt-2 mt-lg-0">
+        
+        <li class="nav-item mr-4 mb-2 mb-lg-0 ">
+           <a class="nav-link pankyll-nav-topic" href="/en_US/About/"><span class="pankyll-nav-topic">About</span></a>
+        </li>
+        
+        <li class="nav-item mr-4 mb-2 mb-lg-0 active">
+           <a class="nav-link pankyll-nav-topic" href="/en_US/Documentation/"><span class="pankyll-nav-topic">Documentation</span></a>
+        </li>
+        
+        <li class="nav-item mr-4 mb-2 mb-lg-0 ">
+           <a class="nav-link pankyll-nav-topic" href="/en_US/Pankyll-Themes/"><span class="pankyll-nav-topic">Pankyll Themes</span></a>
+        </li>
+        
+        <li class="nav-item mr-4 mb-2 mb-lg-0 ">
+           <a class="nav-link pankyll-nav-topic" href="/en_US/Example-Sites/"><span class="pankyll-nav-topic">Example Sites</span></a>
+        </li>
+        
+    </ul>
+    
+    
+    <li class="nav-item dropdown d-none d-lg-block">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="pankyll-nav-topic">
+                More
+            </span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        
+            <a class="dropdown-item" href="/en_US/Categories/">Categories</a>
+        
+            <a class="dropdown-item" href="/en_US/Features/">Features</a>
+        
+            <a class="dropdown-item" href="/en_US/Tags/">Tags</a>
+        
+        </div>
+    </li>
+
+    
+  </div>
+</nav>
+    </header>
+    
+
+
+
+    <div class="rankle-body">
+
+      <section class="rankle-content">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 order-lg-2">
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+    <ol class="breadcrumb spb-1">
+    
+        <li class="breadcrumb-item">
+            <a href="/en_US/Documentation/">Documentation</a>
+        </li>
+    
+        <li class="breadcrumb-item">
+            <a href="/en_US/Documentation/Features/">Features</a>
+        </li>
+    
+        <li class="breadcrumb-item active">
+            <a href="/en_US/Documentation/Features/body-include-before.html">Body Include Before</a>
+        </li>
+    
+    </ol>
+</nav>
+            
+    <div class="title">
+        <h1 id="title">Include Before</h1>
+        <h3 id="author">Christian Külker</h3>
+        
+        <h3 id="author">2020-10-21</h3>
+    </div>
+
+            <p>The <strong>body include before</strong> feature is provided by the theme <a href="https://www.pankyll.org/en_US/Pankyll-Themes/pankyll-theme-rankle.html">Rankle</a> for the page type <code>doc</code> and is set via the configuration in <code>cfg.yaml</code>. It will include text before the content, but after the menu on all pages of the type <code>doc</code>.</p>
+<h2 id="example-configuration">Example Configuration</h2>
+<p>Add this to the <code>site:</code> section of the configuration, for example in <code>cfg.yaml</code>:</p>
+<pre class="yaml"><code>site:
+  body_include_before:  INSERT THIS AFTER THE MENU BAR AND BEFORE THE CONTENT</code></pre>
+
+            
+    
+
+
+
+
+            
+
+
+            
+                <hr>
+    <ul class="status">
+        
+        
+  <li>Last modified (via git): May 14, 2021</li>
+
+
+        
+    
+    <li><a href="https://github.com/ckuelker/pankyll-documentation/commit/e0d36010b5ce0cf1ea1b9c5b2c078345f62b43e6">add 'en_US/Documentation/Features/body-include-before.md' at 2021-05-14 (e0d36010)</a></li>
+    
+
+        
+        <li><a class="rankle-link" href="/en_US/Documentation/Features/body-include-before.pdf">🡻 PDF</a></li>
+
+    </ul>
+
+            
+
+          </div>
+        </div>
+      </section>
+
+
+      <div class="rankle-sidebar-1 hg-sidebar">
+        <div class="col-sm-12 col-md-12 col-lg-12 td-sidebar bar-toc bar-left">
+                 
+       <ul class="td-sidebar-nav-toc-tile">
+         <li class"td-sidebar-nav-toc-tile-item">Include Before</li>
+       
+         <ul>
+<li><a href="#example-configuration">Example Configuration</a></li>
+</ul>
+
+       
+       </ul>
+       
+       
+
+       
+        </div>
+      </div>
+
+
+      <div class="col-sm-12 col-md-12 col-lg-2 order-lg-3 bar-tools bar-right">
+        <div class="rankle-sidebar-2 hg-sidebar">
+          <!-- RIGHT SIDE TOOLS -->
+
+
+      <div class="wrapper">
+        <ul>
+
+          <li>
+            <input type="checkbox" id="list-item-1">
+            <label for="list-item-1" class="first">Download</label>
+            <ul>
+              <li><a href="/en_US/Documentation/Features/body-include-before.pdf">🡻 PDF</a></li>
+            </ul>
+          </li>
+
+
+
+    
+        
+            
+          <li>
+           <input type="checkbox" id="list-item-2">
+            <label for="list-item-2" class="first">Categories</label>
+              <ul>
+            
+                
+                
+                <li><a class="categories-link" href="/en_US/Categories//Feature.html">Feature</a></li>
+            
+              </ul>
+          </li>
+        
+    
+        
+            
+          <li>
+           <input type="checkbox" id="list-item-3">
+            <label for="list-item-3" class="first">Features</label>
+              <ul>
+            
+                
+                
+                <li><a class="features-link" href="/en_US/Features//Include Before.html">Include Before</a></li>
+            
+              </ul>
+          </li>
+        
+    
+        
+            
+          <li>
+           <input type="checkbox" id="list-item-4">
+            <label for="list-item-4" class="first">Tags</label>
+              <ul>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//Rankle.html">Rankle</a></li>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//Include Before.html">Include Before</a></li>
+            
+                
+                
+                <li><a class="tags-link" href="/en_US/Tags//Pankyll.html">Pankyll</a></li>
+            
+              </ul>
+          </li>
+        
+    
+
+
+
+
+
+    
+          <li>
+            <input type="checkbox" id="list-item-5">
+            <label for="list-item-5" class="first">Git</label>
+            <ul>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/blob/master/en_US/Documentation/Features/body-include-before.md"><i class="fab fa-github fa-fw"></i>View latest on Github</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/edit/master/en_US/Documentation/Features/body-include-before.md"><i class="fa fa-edit fa-fw"></i>Edit this page</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/commit/e0d36010b5ce0cf1ea1b9c5b2c078345f62b43e6"><i class="fab fa-git-alt fa-fw"></i>View commit on Github</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/issues/new?title=Documentation"><i class="fa fa-book fa-fw"></i>Create documentation issue</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/issues/new"><i class="fas fa-tasks fa-fw"></i>Create project issue</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <footer>
+      <footer class="bg-dark row d-print-none footer">
+  <div class="footer container-fluid mx-sm5">
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <div class="container-fluid" style="margin-top:5px">
+        <div class="row">
+          <div class="col-sm-2 footer-left">
+            
+            <ul class="list-inline mb-0 footer-list">
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Twitter" data-original-title="Twitter">
+               <a class="text-white footer-link" target="_blank" href="https://twitter.com/search?q=pankyll&src=typed_query">
+                 <i class="fab fa-twitter"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Stack Overflow" data-original-title="Stack Overflow">
+               <a class="text-white footer-link" target="_blank" href="https://stackoverflow.com/search?q=pankyll">
+                 <i class="fab fa-stack-overflow"></i>
+               </a>
+              </li>
+            
+            </ul>
+            
+          </div>
+          <div class="col-sm-8 footer-mid">
+            
+            <ul class="list-inline mb-0 footer-list">
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Pankyll" data-original-title="Pankyll">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker/pankyll">
+                 <i class="fab fa-python"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Rankle" data-original-title="Rankle">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker/pankyll-theme-rankle">
+                 <i class="fab fa-html5"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Example" data-original-title="Example">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker/pankyll-theme-rankle-example">
+                 <i class="fab fa-git-alt"></i>
+               </a>
+              </li>
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Developer" data-original-title="Developer">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker">
+                 <i class="fa fa-user-circle"></i>
+               </a>
+              </li>
+            
+            </ul>
+            
+            <ul class="footer-list footer-middle-list">
+              <li class="footer-item footer-middle-item site-update-last-item">Last site update: 2021-05-15</li>
+            
+              <li class="footer-item footer-middle-item">© 2020, 2021 Christian Külker, All Rights Reserved</li>
+            
+              <li class="footer-item footer-middle-item">Content license: <a class="rankle-link-dark" href="/en_US/License">GNU Free Document License v1.3</a></li>
+            
+            <li class="footer-list-item footer-middle-list-item">
+              <a class="rankle-link-dark footer-link footer-middle-link generator-link" href="https://github.com/ckuelker/pankyll">Pankyll v0.1.0</a>
+              theme <a class="rankle-link-dark theme-link" href="https://github.com/ckuelker/pankyll-theme-rankle">pankyll-theme-rankle v0.1.3</a>
+            </li>
+            </ul>
+
+          </div>
+         <div class="col-sm-2 footer-right">
+            
+            <ul class="list-inline mb-0 footer-list">
+            
+            
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="Git Home" data-original-title="Git Home">
+               <a class="text-white footer-link" target="_blank" href="https://github.com/ckuelker/pankyll-theme-rankle-example">
+                 <i class="fab fa-github"></i>
+               </a>
+              </li>
+            
+            </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+</script>
+<script src="/js/rankle.js"></script>
+
+
+    </footer>
+    
+  </body>
+</html>
