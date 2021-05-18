@@ -13,13 +13,13 @@ This document describes the technical aspects of the repository
 
 ## Changes
 
-| Version | Date       | Author           | Notes                             |
-| ------- | ---------- | ---------------- | --------------------------------- |
-| 0.1.3   | 2021-05-15 | Christian Külker | Favicon, Documentation 0.1.6      |
-| 0.1.2   | 2020-05-13 | Christian Külker | Favicon, Documentation 0.1.3      |
-| 0.1.1   | 2020-04-28 | Christian Külker | Fix theme license                 |
-| 0.1.0   | 2020-04-27 | Christian Külker | Initial release                   |
-
+| Version | Date       | Notes                                                |
+| ------- | ---------- | ---------------------------------------------------- |
+| 0.1.4   | 2021-05-18 | Favicon, Documentation 0.1.7                         |
+| 0.1.3   | 2021-05-15 | Favicon, Documentation 0.1.6                         |
+| 0.1.2   | 2020-05-13 | Favicon, Documentation 0.1.3                         |
+| 0.1.1   | 2020-04-28 | Fix theme license                                    |
+| 0.1.0   | 2020-04-27 | Initial release                                      |
 
 ## Author Of The Content in en_EN
 

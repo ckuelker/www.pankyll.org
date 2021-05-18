@@ -1,43 +1,33 @@
 <!DOCTYPE html>
 <html lang=en_US class=no-js>
   <head>
-    <meta name=type content="doc">
-          <title>Creating A Pankyll Theme Skeleton</title>
+    <meta name=type content="keyword">
+          <title>Top 10</title>
 
 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name=generator content="Pankyll v0.1.0">
 
-      <meta name="description" content="Create a Example Skeleton and show how to use git sub-modules">
 
-
-      <meta property="og:title" content="Creating A Pankyll Theme Skeleton">
-      <meta property="og:description" content="Create a Example Skeleton and show how to use git sub-modules">
+      <meta property="og:title" content="Top 10">
+      <meta property="og:description" content="False">
       <meta property="og:type" content="article">
-      <meta property="og:url" content="/en_US/Documentation/creating-pankyll-theme-skeleton.md">
+      <meta property="og:url" content="/en_US/Features/Top 10.md">
 
-      <meta property="article:published_time" content="2020-05-13 09:15:56 ">
-
-
-      <meta property="article:modified_time" content="2020-05-13 09:15:56 ">
 
       <meta property="og:site_name" content="Pankyll">
-      <meta itemprop=name content="Creating A Pankyll Theme Skeleton">
-      <meta itemprop=description content="Create a Example Skeleton and show how to use git sub-modules">
-
-      <meta itemprop=datePublished content="2020-05-13 09:15:56 ">
+      <meta itemprop=name content="Top 10">
+      <meta itemprop=description content="False">
 
 
-      <meta itemprop=dateModified content="2020-05-13 09:15:56 ">
 
-
-      <meta itemprop=wordCount content="171">
+      <meta itemprop=wordCount content="2">
 
       <meta itemprop=keywords content="cheat sheet,">
       <meta name=twitter:card content="summary">
-      <meta name=twitter:title content="Creating A Pankyll Theme Skeleton">
-      <meta name=twitter:description content="Create a Example Skeleton and show how to use git sub-modules">
+      <meta name=twitter:title content="Top 10">
+      <meta name=twitter:description content="False">
 
 
 
@@ -78,7 +68,7 @@
            <a class="nav-link pankyll-nav-topic" href="/en_US/About/"><span class="pankyll-nav-topic">About</span></a>
         </li>
         
-        <li class="nav-item mr-4 mb-2 mb-lg-0 active">
+        <li class="nav-item mr-4 mb-2 mb-lg-0 ">
            <a class="nav-link pankyll-nav-topic" href="/en_US/Documentation/"><span class="pankyll-nav-topic">Documentation</span></a>
         </li>
         
@@ -114,8 +104,6 @@
   </div>
 </nav>
     </header>
-    
-
 
 
     <div class="rankle-body">
@@ -127,144 +115,33 @@
     <ol class="breadcrumb spb-1">
     
         <li class="breadcrumb-item">
-            <a href="/en_US/Documentation/">Documentation</a>
+            <a href="/en_US/Features/">Features</a>
         </li>
     
         <li class="breadcrumb-item active">
-            <a href="/en_US/Documentation/creating-pankyll-theme-skeleton.html">Creating Pankyll Theme Skeleton</a>
+            <a href="/en_US/Features/Top 10.html">Top 10</a>
         </li>
     
     </ol>
 </nav>
+            <h2 id="top-10">Top 10</h2>
+
             
-    <div class="title">
-        <h1 id="title">Creating A Pankyll Theme Skeleton</h1>
-        <h3 id="author">Christian Külker</h3>
-        <h3 id="version">0.1.4</h3>
-        <h3 id="author">2020-04-30</h3>
+    
+    <div class="keyword">
+       
+       <div class="keyword-item">
+           <a class="keyword-link" href="/en_US/Documentation/Features/top10.html">Top 10</a>
+       </div>
+       
     </div>
-
-            <blockquote>
-<p>This document shows how to create an example <a href="https://de.wikipedia.org/wiki/Git">git</a> repository for a <a href="https://www.pankyll.org">Pankyll</a> theme with the example of the <a href="https://www.pankyll.org">Pankyll</a> [Newspaper] theme.</p>
-</blockquote>
-<h2 id="creating-the-simplicissimus-skeleton">Creating the Simplicissimus Skeleton</h2>
-<pre class="shell"><code>cd pankyll-theme-simplicissimus-example
-git init
-
-# pandoc
-export URL=https://github.com/ckuelker/pankyll-pandoc.git
-git submodule add -b master $URL pandoc
-git submodule init
-
-# content
-export URL=https://github.com/ckuelker/pankyll-documentation.git
-git submodule add -b master $URL content
-git submodule init
-
-# theme
-mkdir themes
-export URL=https://github.com/ckuelker/pankyll-theme-simplicissimus.git
-git submodule add -b master $URL themes/pankyll-theme-simplicissimus
-git submodule init
-
-mkdir static
-</code></pre>
-<blockquote>
-<p>Some files need to be created:</p>
-</blockquote>
-<ul>
-<li>cfg.yaml</li>
-<li>log.yaml</li>
-</ul>
-<blockquote>
-<p>The <code>Makefile</code> is optional.</p>
-</blockquote>
-<h2 id="updating-git-sub-modules">Updating Git Sub-Modules</h2>
-<pre class="bash"><code>git submodule update --init --recursive
-git submodule update --remote
-# replace THEME with correct value
-cd themes/pankyll-theme-THEME
-git submodule update --init --recursive
-git submodule update --remote</code></pre>
-<h2 id="external-links">External Links</h2>
-<p><strong>Guides On Git Sub-Modules</strong></p>
-<ul>
-<li><a href="https://www.vogella.com/tutorials/GitSubmodules/article.html">Vogella Guide</a></li>
-<li><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git-scm Book</a></li>
-</ul>
-<h2 id="about-this-document">About This Document</h2>
-<h3 id="changes">Changes</h3>
-<table>
-<thead>
-<tr class="header">
-<th>Version</th>
-<th>Date</th>
-<th>Author</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>0.1.4</td>
-<td>2020-04-30</td>
-<td>Christian Külker</td>
-<td>Add .git extension to repos</td>
-</tr>
-<tr class="even">
-<td>0.1.3</td>
-<td>2020-04-27</td>
-<td>Christian Külker</td>
-<td>Cleanup links, git output</td>
-</tr>
-<tr class="odd">
-<td>0.1.2</td>
-<td>2020-04-21</td>
-<td>Christian Külker</td>
-<td>Add git output</td>
-</tr>
-<tr class="even">
-<td>0.1.1</td>
-<td>2020-04-09</td>
-<td>Christian Külker</td>
-<td>Add links</td>
-</tr>
-<tr class="odd">
-<td>0.1.0</td>
-<td>2020-03-22</td>
-<td>Christian Külker</td>
-<td>Initial release</td>
-</tr>
-</tbody>
-</table>
-
-            
-    
+      
 
 
 
-
+ 
             
 
-
-            
-                <hr>
-    <ul class="status">
-        
-        
-  <li>Last modified (via git): May 13, 2020</li>
-
-
-        
-    
-    <li><a href="https://github.com/ckuelker/pankyll-documentation/commit/d157468084be4a09882a62608ec7094476c10166">add TOC: True to front matter (d1574680)</a></li>
-    
-
-        <li>171 words</li>
-        <li><a class="rankle-link" href="/en_US/Documentation/creating-pankyll-theme-skeleton.pdf">🡻 PDF</a></li>
-
-    </ul>
-
-            
 
           </div>
         </div>
@@ -274,21 +151,7 @@ git submodule update --remote</code></pre>
       <div class="rankle-sidebar-1 hg-sidebar">
         <div class="col-sm-12 col-md-12 col-lg-12 td-sidebar bar-toc bar-left">
                  
-       <ul class="td-sidebar-nav-toc-tile">
-         <li class"td-sidebar-nav-toc-tile-item">Creating A Pankyll Theme Skeleton</li>
-       
-         <ul>
-<li><a href="#creating-the-simplicissimus-skeleton">Creating the Simplicissimus Skeleton</a></li>
-<li><a href="#updating-git-sub-modules">Updating Git Sub-Modules</a></li>
-<li><a href="#external-links">External Links</a></li>
-<li><a href="#about-this-document">About This Document</a>
-<ul>
-<li><a href="#changes">Changes</a></li>
-</ul></li>
-</ul>
-
-       
-       </ul>
+         
        
        
 
@@ -307,14 +170,6 @@ git submodule update --remote</code></pre>
       <div class="wrapper">
         <ul>
 
-          <li>
-            <input type="checkbox" id="list-item-1">
-            <label for="list-item-1" class="first">Download</label>
-            <ul>
-              <li><a href="/en_US/Documentation/creating-pankyll-theme-skeleton.pdf">🡻 PDF</a></li>
-            </ul>
-          </li>
-
 
 
     
@@ -323,28 +178,9 @@ git submodule update --remote</code></pre>
         
     
         
-            
-          <li>
-           <input type="checkbox" id="list-item-2">
-            <label for="list-item-2" class="first">Tags</label>
-              <ul>
-            
-                
-                
-                <li><a class="tags-link" href="/en_US/Tags//Pankyll Skeleton.html">Pankyll Skeleton</a></li>
-            
-                
-                
-                <li><a class="tags-link" href="/en_US/Tags//Git.html">Git</a></li>
-            
-                
-                
-                <li><a class="tags-link" href="/en_US/Tags//Pankyll.html">Pankyll</a></li>
-            
-              </ul>
-          </li>
-        
     
+
+
 
 
 
@@ -352,23 +188,8 @@ git submodule update --remote</code></pre>
 
     
           <li>
-            <input type="checkbox" id="list-item-3">
-            <label for="list-item-3" class="first">Git</label>
-            <ul>
-              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/blob/master/en_US/Documentation/creating-pankyll-theme-skeleton.md"><i class="fab fa-github fa-fw"></i>View latest on Github</a></li>
-              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/edit/master/en_US/Documentation/creating-pankyll-theme-skeleton.md"><i class="fa fa-edit fa-fw"></i>Edit this page</a></li>
-              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/commit/d157468084be4a09882a62608ec7094476c10166"><i class="fab fa-git-alt fa-fw"></i>View commit on Github</a></li>
-              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/issues/new?title=Documentation"><i class="fa fa-book fa-fw"></i>Create documentation issue</a></li>
-              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/issues/new"><i class="fas fa-tasks fa-fw"></i>Create project issue</a></li>
-            </ul>
-          </li>
-
-
-
-    
-          <li>
-            <input type="checkbox" id="list-item-4">
-            <label for="list-item-4" class="first">Latest</label>
+            <input type="checkbox" id="list-item-2">
+            <label for="list-item-2" class="first">Latest</label>
             <ul>
       
               <li><a class="tag-link" href="/en_US/index.html">Welcome to Pankyll (2021-05-18)</a></li>
@@ -520,6 +341,5 @@ git submodule update --remote</code></pre>
 
 
     </footer>
-    
   </body>
 </html>
