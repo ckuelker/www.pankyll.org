@@ -150,7 +150,7 @@
         <h3 id="author">2020-04-26</h3>
     </div>
 
-            <p>The <strong>home feature</strong> is basically a feature to define the link home. This will set two variables inside the template depending on the locale: <code>{{home_text}}</code> and <code>{{home_url}}</code>. <a href="/en_US/Pankyll-Themes/">Themes</a> are encouraged to use this over <code>href=&quot;{{cfg.site.url}}&quot;</code> and <code>{{cfg.site.title}}</code> as this will only link back to the default language/ locale. It is strongly recommended to use this feature, also because <a href="https://www.pankyll.org/">Pankyll</a> is using it to calculate a template <code>{{title}}</code> value. (See feature <a href="/en_US/Documentation/Features/title.html">title</a>)</p>
+            <p>The <strong>home feature</strong> is basically a feature to define the link home. This will set two variables inside the template depending on the locale: <code>{{home_text}}</code> and <code>{{home_url}}</code>. <a href="/en_US/Pankyll-Themes/">Themes</a> are encouraged to use this over <code>href="{{cfg.site.url}}"</code> and <code>{{cfg.site.title}}</code> as this will only link back to the default language/ locale. It is strongly recommended to use this feature, also because <a href="https://www.pankyll.org/">Pankyll</a> is using it to calculate a template <code>{{title}}</code> value. (See feature <a href="/en_US/Documentation/Features/title.html">title</a>)</p>
 <pre class="yaml"><code>home:
     en_US:
         text: Pankyll Themes  # home_text
@@ -185,7 +185,7 @@
     
 
         
-        <li><a class="rankle-link" href="/en_US/Documentation/Features/home.pdf">🡻 PDF</a></li>
+        
 
     </ul>
 
@@ -223,14 +223,6 @@
 
       <div class="wrapper">
         <ul>
-
-          <li>
-            <input type="checkbox" id="list-item-1">
-            <label for="list-item-1" class="first">Download</label>
-            <ul>
-              <li><a href="/en_US/Documentation/Features/home.pdf">🡻 PDF</a></li>
-            </ul>
-          </li>
 
 
 
@@ -318,25 +310,27 @@
             <label for="list-item-6" class="first">Latest</label>
             <ul>
       
-              <li><a class="tag-link" href="/en_US/index.html">Welcome to Pankyll (2021-05-18)</a></li>
+              <li><a class="tag-link" href="/en_US/Pankyll-Themes/pankyll-theme-simplicissimus.html">Pankyll Theme Simplicissimus (2022-05-20)</a></li>
       
-              <li><a class="tag-link" href="/en_US/Documentation/Features/overview.html">Feature Overview (2021-05-18)</a></li>
+              <li><a class="tag-link" href="/en_US/About/index.html">Pankyll (2022-05-19)</a></li>
+      
+              <li><a class="tag-link" href="/en_US/index.html">Welcome (2022-05-19)</a></li>
+      
+              <li><a class="tag-link" href="/en_US/Documentation/Features/overview.html">Features (2022-05-19)</a></li>
       
               <li><a class="tag-link" href="/en_US/Documentation/Features/top10.html">Top 10 (2021-05-18)</a></li>
       
-              <li><a class="tag-link" href="/en_US/Documentation/Features/create-pdf.html">Create PDF (2021-05-13)</a></li>
+              <li><a class="tag-link" href="/en_US/Documentation/Features/word-count.html">Word Count (2021-05-13)</a></li>
       
               <li><a class="tag-link" href="/en_US/Documentation/Features/css-local.html">CSS Local (2021-05-13)</a></li>
       
-              <li><a class="tag-link" href="/en_US/Documentation/Features/js-local.html">JS Local (2021-05-13)</a></li>
+              <li><a class="tag-link" href="/en_US/Documentation/Features/create-pdf.html">Create PDF (2021-05-13)</a></li>
       
-              <li><a class="tag-link" href="/en_US/Documentation/Features/word-count.html">Word Count (2021-05-13)</a></li>
+              <li><a class="tag-link" href="/en_US/Documentation/Features/js-local.html">JS Local (2021-05-13)</a></li>
       
               <li><a class="tag-link" href="/en_US/Documentation/Features/body-include-after.html">Include After (2020-10-21)</a></li>
       
               <li><a class="tag-link" href="/en_US/Documentation/Features/body-include-before.html">Include Before (2020-10-21)</a></li>
-      
-              <li><a class="tag-link" href="/en_US/Documentation/Features/toc.html">Table Of Contents (2020-05-13)</a></li>
       
             </ul>
           </li>
@@ -425,9 +419,9 @@
             </ul>
             
             <ul class="footer-list footer-middle-list">
-              <li class="footer-item footer-middle-item site-update-last-item">Last site update: 2021-05-18</li>
+              <li class="footer-item footer-middle-item site-update-last-item">Last page update: 2022-05-20</li>
             
-              <li class="footer-item footer-middle-item">© 2020, 2021 Christian Külker, All Rights Reserved</li>
+              <li class="footer-item footer-middle-item">© 2020, 2021, 2022 Christian Külker, All Rights Reserved</li>
             
               <li class="footer-item footer-middle-item">Content license: <a class="rankle-link-dark" href="/en_US/License">GNU Free Document License v1.3</a></li>
             

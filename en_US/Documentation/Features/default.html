@@ -19,22 +19,22 @@
       <meta property="og:type" content="article">
       <meta property="og:url" content="/en_US/Documentation/Features/default.md">
 
-      <meta property="article:published_time" content="2020-05-13 09:21:26 ">
+      <meta property="article:published_time" content="2021-05-18 16:36:33 ">
 
 
-      <meta property="article:modified_time" content="2020-05-13 09:21:26 ">
+      <meta property="article:modified_time" content="2021-05-18 16:36:33 ">
 
       <meta property="og:site_name" content="Pankyll">
       <meta itemprop=name content="Default">
       <meta itemprop=description content="Default feature documentation">
 
-      <meta itemprop=datePublished content="2020-05-13 09:21:26 ">
+      <meta itemprop=datePublished content="2021-05-18 16:36:33 ">
 
 
-      <meta itemprop=dateModified content="2020-05-13 09:21:26 ">
+      <meta itemprop=dateModified content="2021-05-18 16:36:33 ">
 
 
-      <meta itemprop=wordCount content="780">
+      <meta itemprop=wordCount content="776">
 
       <meta itemprop=keywords content="cheat sheet,">
       <meta name=twitter:card content="summary">
@@ -150,8 +150,8 @@
         <h3 id="author">2020-04-26</h3>
     </div>
 
-            <p>Some values need to have pre-defined values, so called default values. <a href="https://www.pankyll.org/">Pankyll</a> explicitly supports for some values that this values are set to a default value for the whole web site.</p>
-<h2 id="site-cfg.yaml-example">Site cfg.yaml Example</h2>
+            <p>Some values need to have pre-defined values, so called default values. <a href="https://www.pankyll.org/">Pankyll</a> explicitly supports for some values that this values are set to a default value for the whole website.</p>
+<h2 id="website-cfg.yaml-example">Website cfg.yaml Example</h2>
 <pre class="yaml"><code>default:
     page_type:         doc
     keyword_page_type: keyword
@@ -161,7 +161,7 @@
     css_local:         False
     js_local:          False</code></pre>
 <h3 id="page_type">page_type</h3>
-<p>Every theme has different kind of web pages in its template layout directory. Usually the front matter defined with the key <code>page_type:</code> the kind of template to be used. For example the <code>page_type: doc</code> uses the <code>themes/NAME/layouts/doc/index.html</code> as a template to render the page. (Replace <code>NAME</code> with name of the used <a href="/en_US/Pankyll-Themes/">theme</a>. There are cases in which almost all pages of a given web site are of one type. Rather forcing to add a <code>page_type:</code> in every page front matter, this default value sets the page type for pages without a <code>page_type:</code> in the front matter. The possible values are dependent on the theme. Every theme can define as many page types as the theme wants.</p>
+<p>Every theme has different kind of web pages in its template layout directory. Usually the front matter defined with the key <code>page_type:</code> the kind of template to be used. For example the <code>page_type: doc</code> uses the <code>themes/NAME/layouts/doc/index.html</code> as a template to render the page. (Replace <code>NAME</code> with name of the used <a href="/en_US/Pankyll-Themes/">theme</a>. There are cases in which almost all pages of a given website are of one type. Rather forcing to add a <code>page_type:</code> in every page front matter, this default value sets the page type for pages without a <code>page_type:</code> in the front matter. The possible values are dependent on the theme. Every theme can define as many page types as the theme wants.</p>
 <h3 id="example-values-for-3-themes">Example Values For 3 Themes</h3>
 <table>
 <thead>
@@ -201,16 +201,16 @@
 <h2 id="l10n_locale">l10n_locale</h2>
 <p>As <a href="https://www.pankyll.org/">Pankyll</a> support multilinugal pages, it is assumed that a page has at least one language. The key <code>l10n_locale:</code> require the name of the locale, that is basically the top level directory of your content folder. If you would like to create a German page your content directory might look like this <code>content/de_DE/index.md</code>, than <code>de_DE</code> is the default locale and you should set <code>l10n_locale: de_DE</code>. If you would like to create an English page your content directory might look like this <code>content/en_US/index.md</code>, than <code>en_US</code> is the default locale and you should set <code>l10n_locale: en_US</code>.</p>
 <h2 id="pdf_create">pdf_create</h2>
-<p><a href="https://www.pankyll.org/">Pankyll</a> supports the creation of <a href="https://en.wikipedia.org/wiki/PDF">PDF</a> version if the <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> page via <a href="https://pandoc.org/">Pandoc</a>. Some pages would like to have a link pointing to download the <a href="https://en.wikipedia.org/wiki/PDF">PDF</a> version of a page, some sites would not. Also when developing a new web site, the creation of <a href="https://en.wikipedia.org/wiki/PDF">PDF</a> pages takes time. To speed up the development, the creation can be globally enabled or disabled for the site. As a remark, for now <a href="https://www.pankyll.org/">Pankyll</a> do not create <a href="https://en.wikipedia.org/wiki/PDF">PDF</a> documents for <code>index.md</code> pages. Just use a different page name for now. To enable <a href="https://en.wikipedia.org/wiki/PDF">PDF</a> creation set the key to <code>True</code> like this: <code>pdf_create: True</code> and to disable it to: <code>pdf_create: False</code>. Keep in mind that <a href="https://yaml.org/">YAML</a> is case sensitive. <code>pdf_create: true</code> might not work.</p>
+<p><a href="https://www.pankyll.org/">Pankyll</a> supports the creation of <a href="https://en.wikipedia.org/wiki/PDF">PDF</a> version if the <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> page via <a href="https://pandoc.org/">Pandoc</a>. Some pages would like to have a link pointing to download the <a href="https://en.wikipedia.org/wiki/PDF">PDF</a> version of a page, some sides would not. Also when developing a new website, the creation of <a href="https://en.wikipedia.org/wiki/PDF">PDF</a> pages takes time. To speed up the development, the creation can be globally enabled or disabled for the website. As a remark, for now <a href="https://www.pankyll.org/">Pankyll</a> do not create <a href="https://en.wikipedia.org/wiki/PDF">PDF</a> documents for <code>index.md</code> pages. Just use a different page name for now. To enable <a href="https://en.wikipedia.org/wiki/PDF">PDF</a> creation set the key to <code>True</code> like this: <code>pdf_create: True</code> and to disable it to: <code>pdf_create: False</code>. Keep in mind that <a href="https://yaml.org/">YAML</a> is case sensitive. <code>pdf_create: true</code> might not work.</p>
 <h2 id="css_local">css_local</h2>
-<p>Some themes (or your site) might offer the delivery of <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a> files locally as in contrast to point to some arbitrary third party web servers. There are advantages and disadvantages for this. <code>css_local: True</code> might deliver some CSS locally from some themes or sites, while <code>css_local: False</code> do not. You have to look into your theme to see if it supports it.</p>
+<p>Some themes (or your website) might offer the delivery of <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a> files locally as in contrast to point to some arbitrary third party web servers. There are advantages and disadvantages for this. <code>css_local: True</code> might deliver some CSS locally from some themes or websites, while <code>css_local: False</code> do not. You have to look into your theme to see if it supports it.</p>
 <h3 id="example-theme-support-template-snippet">Example Theme Support Template Snippet</h3>
 <pre class="html"><code>{% if cfg.default.css_local %}
   &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/hljs/highlight-default.min.css&quot;&gt;
 {% else %}
   &lt;link rel=&quot;stylesheet&quot; href=&quot;//SOME_SERVER/styles/default.min.css&quot;&gt;
 {% endif %}</code></pre>
-<p>For this to work locally you have (1) copy <code>highlight-default.min.css</code> (obtained from some web site) to <code>themes/NAME/static/css/highlight-default.min.css</code> and (2) set <code>css_local: True</code> in <code>cfg.yaml</code>.</p>
+<p>For this to work locally you have (1) copy <code>highlight-default.min.css</code> (obtained from some website) to <code>themes/NAME/static/css/highlight-default.min.css</code> and (2) set <code>css_local: True</code> in <code>cfg.yaml</code>.</p>
 <h2 id="js_local">js_local</h2>
 <p>This option is basically the same as <code>css_local</code>, but just for <a href="https://en.wikipedia.org/wiki/JavaScript">javascript</a> files. See section <a href="#css_local">css_local</a> for details.</p>
 
@@ -228,16 +228,16 @@
     <ul class="status">
         
         
-  <li>Last modified (via git): May 13, 2020</li>
+  <li>Last modified (via git): May 18, 2021</li>
 
 
         
     
-    <li><a href="https://github.com/ckuelker/pankyll-documentation/commit/afd48ea48b77f6a3f00d04b91551bb9bfd57ec58">add features keyword (afd48ea4)</a></li>
+    <li><a href="https://github.com/ckuelker/pankyll-documentation/commit/fbfaf117441444a31910a07a59c29b647b06d27b">Dispatch site, side, website, page (fbfaf117)</a></li>
     
 
-        <li>780 words</li>
-        <li><a class="rankle-link" href="/en_US/Documentation/Features/default.pdf">🡻 PDF</a></li>
+        <li>776 words</li>
+        
 
     </ul>
 
@@ -255,7 +255,7 @@
          <li class"td-sidebar-nav-toc-tile-item">Default</li>
        
          <ul>
-<li><a href="#site-cfg.yaml-example">Site cfg.yaml Example</a>
+<li><a href="#website-cfg.yaml-example">Website cfg.yaml Example</a>
 <ul>
 <li><a href="#page_type">page_type</a></li>
 <li><a href="#example-values-for-3-themes">Example Values For 3 Themes</a></li>
@@ -292,14 +292,6 @@
 
       <div class="wrapper">
         <ul>
-
-          <li>
-            <input type="checkbox" id="list-item-1">
-            <label for="list-item-1" class="first">Download</label>
-            <ul>
-              <li><a href="/en_US/Documentation/Features/default.pdf">🡻 PDF</a></li>
-            </ul>
-          </li>
 
 
 
@@ -389,7 +381,7 @@
             <ul>
               <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/blob/master/en_US/Documentation/Features/default.md"><i class="fab fa-github fa-fw"></i>View latest on Github</a></li>
               <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/edit/master/en_US/Documentation/Features/default.md"><i class="fa fa-edit fa-fw"></i>Edit this page</a></li>
-              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/commit/afd48ea48b77f6a3f00d04b91551bb9bfd57ec58"><i class="fab fa-git-alt fa-fw"></i>View commit on Github</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/commit/fbfaf117441444a31910a07a59c29b647b06d27b"><i class="fab fa-git-alt fa-fw"></i>View commit on Github</a></li>
               <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/issues/new?title=Documentation"><i class="fa fa-book fa-fw"></i>Create documentation issue</a></li>
               <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/issues/new"><i class="fas fa-tasks fa-fw"></i>Create project issue</a></li>
             </ul>
@@ -403,25 +395,27 @@
             <label for="list-item-6" class="first">Latest</label>
             <ul>
       
-              <li><a class="tag-link" href="/en_US/index.html">Welcome to Pankyll (2021-05-18)</a></li>
+              <li><a class="tag-link" href="/en_US/Pankyll-Themes/pankyll-theme-simplicissimus.html">Pankyll Theme Simplicissimus (2022-05-20)</a></li>
       
-              <li><a class="tag-link" href="/en_US/Documentation/Features/overview.html">Feature Overview (2021-05-18)</a></li>
+              <li><a class="tag-link" href="/en_US/About/index.html">Pankyll (2022-05-19)</a></li>
+      
+              <li><a class="tag-link" href="/en_US/index.html">Welcome (2022-05-19)</a></li>
+      
+              <li><a class="tag-link" href="/en_US/Documentation/Features/overview.html">Features (2022-05-19)</a></li>
       
               <li><a class="tag-link" href="/en_US/Documentation/Features/top10.html">Top 10 (2021-05-18)</a></li>
       
-              <li><a class="tag-link" href="/en_US/Documentation/Features/create-pdf.html">Create PDF (2021-05-13)</a></li>
+              <li><a class="tag-link" href="/en_US/Documentation/Features/word-count.html">Word Count (2021-05-13)</a></li>
       
               <li><a class="tag-link" href="/en_US/Documentation/Features/css-local.html">CSS Local (2021-05-13)</a></li>
       
-              <li><a class="tag-link" href="/en_US/Documentation/Features/js-local.html">JS Local (2021-05-13)</a></li>
+              <li><a class="tag-link" href="/en_US/Documentation/Features/create-pdf.html">Create PDF (2021-05-13)</a></li>
       
-              <li><a class="tag-link" href="/en_US/Documentation/Features/word-count.html">Word Count (2021-05-13)</a></li>
+              <li><a class="tag-link" href="/en_US/Documentation/Features/js-local.html">JS Local (2021-05-13)</a></li>
       
               <li><a class="tag-link" href="/en_US/Documentation/Features/body-include-after.html">Include After (2020-10-21)</a></li>
       
               <li><a class="tag-link" href="/en_US/Documentation/Features/body-include-before.html">Include Before (2020-10-21)</a></li>
-      
-              <li><a class="tag-link" href="/en_US/Documentation/Features/toc.html">Table Of Contents (2020-05-13)</a></li>
       
             </ul>
           </li>
@@ -510,9 +504,9 @@
             </ul>
             
             <ul class="footer-list footer-middle-list">
-              <li class="footer-item footer-middle-item site-update-last-item">Last site update: 2021-05-18</li>
+              <li class="footer-item footer-middle-item site-update-last-item">Last page update: 2022-05-20</li>
             
-              <li class="footer-item footer-middle-item">© 2020, 2021 Christian Külker, All Rights Reserved</li>
+              <li class="footer-item footer-middle-item">© 2020, 2021, 2022 Christian Külker, All Rights Reserved</li>
             
               <li class="footer-item footer-middle-item">Content license: <a class="rankle-link-dark" href="/en_US/License">GNU Free Document License v1.3</a></li>
             

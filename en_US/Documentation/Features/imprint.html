@@ -17,22 +17,22 @@
       <meta property="og:type" content="article">
       <meta property="og:url" content="/en_US/Documentation/Features/imprint.md">
 
-      <meta property="article:published_time" content="2020-05-13 09:21:26 ">
+      <meta property="article:published_time" content="2021-05-18 16:36:33 ">
 
 
-      <meta property="article:modified_time" content="2020-05-13 09:21:26 ">
+      <meta property="article:modified_time" content="2021-05-18 16:36:33 ">
 
       <meta property="og:site_name" content="Pankyll">
       <meta itemprop=name content="Imprint">
       <meta itemprop=description content="Imprint feature documentation">
 
-      <meta itemprop=datePublished content="2020-05-13 09:21:26 ">
+      <meta itemprop=datePublished content="2021-05-18 16:36:33 ">
 
 
-      <meta itemprop=dateModified content="2020-05-13 09:21:26 ">
+      <meta itemprop=dateModified content="2021-05-18 16:36:33 ">
 
 
-      <meta itemprop=wordCount content="451">
+      <meta itemprop=wordCount content="450">
 
       <meta itemprop=keywords content="cheat sheet,">
       <meta name=twitter:card content="summary">
@@ -148,19 +148,19 @@
         <h3 id="author">2020-04-27</h3>
     </div>
 
-            <p>Some states like Germany demand to have a page as in imprint for the web site. The ‘imprint feature’ provide this for theme designers to easily add a link to an imprint page wherever they see fit. It is not mandatory for <a href="https://www.pankyll.org/">Pankyll</a> to have a imprint page. This section describes the usage and non usage of an imprint page with <a href="https://www.pankyll.org/">Pankyll</a>. The imprint feature depends on the localization feature.</p>
+            <p>Some states like Germany demand to have a page as in imprint for the website. The ‘imprint feature’ provide this for theme designers to easily add a link to an imprint page wherever they see fit. It is not mandatory for <a href="https://www.pankyll.org/">Pankyll</a> to have a imprint page. This section describes the usage and non usage of an imprint page with <a href="https://www.pankyll.org/">Pankyll</a>. The imprint feature depends on the localization feature.</p>
 <h2 id="how-it-works">How It Works</h2>
-<p><a href="https://www.pankyll.org/">Pankyll</a> provides the <a href="https://palletsprojects.com/p/jinja/">Jinja2</a> variables <code>has_imprint</code>, <code>imprint_url</code> and <code>imprint_text</code>. The configuration provides a directory key <code>url</code>. This is needed, because there are cases where a git repository is used in different cases: (a) as an example content (without imprint site) and (b) as a real deployed site (with imprint page). Pankyll will dispatch this cases by the existence of this file or directory. If the directory or files do not exist (or the whole imprint configuration) the <code>has_imprint</code> will be set to <code>False</code> and the <code>imprint_url</code> and <code>imprint_text</code> will be set (for now) to the values of the <a href="/en_US/Documentation/Features/home.html">home feature</a>, but should not be used by a theme.</p>
-<p>The key <code>has_imprint</code> will be set to <code>True</code> if the site configuration <code>cfg.yaml</code> fulfill the following criteria:</p>
+<p><a href="https://www.pankyll.org/">Pankyll</a> provides the <a href="https://palletsprojects.com/p/jinja/">Jinja2</a> variables <code>has_imprint</code>, <code>imprint_url</code> and <code>imprint_text</code>. The configuration provides a directory key <code>url</code>. This is needed, because there are cases where a git repository is used in different cases: (a) as an example content (without imprint page) and (b) as a real deployed website (with imprint page). Pankyll will dispatch this cases by the existence of this file or directory. If the directory or files do not exist (or the whole imprint configuration) the <code>has_imprint</code> will be set to <code>False</code> and the <code>imprint_url</code> and <code>imprint_text</code> will be set (for now) to the values of the <a href="/en_US/Documentation/Features/home.html">home feature</a>, but should not be used by a theme.</p>
+<p>The key <code>has_imprint</code> will be set to <code>True</code> if the website configuration <code>cfg.yaml</code> fulfill the following criteria:</p>
 <ul>
 <li>has the key <code>imprint</code></li>
-<li>the key <code>imprint</code> has the current locale key (e.g. <code>de_DE</code>)</li>
+<li>the key <code>imprint</code> has the current locale key (e.g. <code>de_DE</code>)</li>
 <li>the current locale key has <code>url</code> key</li>
 <li>the current locale key has <code>text</code> key</li>
 <li>the directory or file of the <code>url</code> key exists</li>
 </ul>
-<p>iTo use an imprint page with the imprint feature add the following snippet to your site configuration in <code>cfg.yaml</code>. See <code>cfg.yaml</code> example below. Depending on your supported languages, the snippet might look a little bit different.</p>
-<h2 id="site-cfg.yaml-example">Site cfg.yaml Example</h2>
+<p>To use an imprint page with the imprint feature add the following snippet to your website configuration in <code>cfg.yaml</code>. See <code>cfg.yaml</code> example below. Depending on your supported languages, the snippet might look a little bit different.</p>
+<h2 id="website-cfg.yaml-example">Website cfg.yaml Example</h2>
 <pre class="yaml"><code>imprint:                   # enable imprint feature
     en_US:                 # at least the default language
       url:   en_US/Imprint # the link target
@@ -171,7 +171,7 @@
     ja_JP:
       url:   ja_JP/Imprint
       text:  インプリント</code></pre>
-<p>For the <a href="https://en.wikipedia.org/wiki/URL">URL</a> to work correctly you should not add a prefix. The prefix of the <a href="https://en.wikipedia.org/wiki/URL">URL</a> will be added by <a href="https://www.pankyll.org/">Pankyll</a> and it depends on the site configuration in <code>cfg.yaml</code>. If you imprint link points to a directory create an index <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> file. If you prefer a named link, it should point to the <a href="https://en.wikipedia.org/wiki/HTML">HTML</a> file that either exists in static or that will be created by <a href="https://www.pankyll.org/">Pankyll</a> from a <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> file. <a href="/en_US/Pankyll-Themes/">Themes</a> that support the <a href="https://www.pankyll.org/">Pankyll</a> imprint will add a link to the imprint page.</p>
+<p>For the <a href="https://en.wikipedia.org/wiki/URL">URL</a> to work correctly you should not add a prefix. The prefix of the <a href="https://en.wikipedia.org/wiki/URL">URL</a> will be added by <a href="https://www.pankyll.org/">Pankyll</a> and it depends on the website configuration in <code>cfg.yaml</code>. If you imprint link points to a directory create an index <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> file. If you prefer a named link, it should point to the <a href="https://en.wikipedia.org/wiki/HTML">HTML</a> file that either exists in static or that will be created by <a href="https://www.pankyll.org/">Pankyll</a> from a <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> file. <a href="/en_US/Pankyll-Themes/">Themes</a> that support the <a href="https://www.pankyll.org/">Pankyll</a> imprint will add a link to the imprint page.</p>
 <h2 id="theme-jinja2-template-example">Theme Jinja2 Template Example</h2>
 <pre class="html"><code>{% if has_imprint and imprint_url and imprint_text %}
   &lt;div id=&#39;imprint&#39;&gt;&lt;a href=&quot;{{ imprint_url }}&quot;&gt;{{ imprint_text }}&lt;/a&gt;&lt;/div&gt;
@@ -196,16 +196,16 @@
     <ul class="status">
         
         
-  <li>Last modified (via git): May 13, 2020</li>
+  <li>Last modified (via git): May 18, 2021</li>
 
 
         
     
-    <li><a href="https://github.com/ckuelker/pankyll-documentation/commit/afd48ea48b77f6a3f00d04b91551bb9bfd57ec58">add features keyword (afd48ea4)</a></li>
+    <li><a href="https://github.com/ckuelker/pankyll-documentation/commit/fbfaf117441444a31910a07a59c29b647b06d27b">Dispatch site, side, website, page (fbfaf117)</a></li>
     
 
-        <li>451 words</li>
-        <li><a class="rankle-link" href="/en_US/Documentation/Features/imprint.pdf">🡻 PDF</a></li>
+        <li>450 words</li>
+        
 
     </ul>
 
@@ -224,7 +224,7 @@
        
          <ul>
 <li><a href="#how-it-works">How It Works</a></li>
-<li><a href="#site-cfg.yaml-example">Site cfg.yaml Example</a></li>
+<li><a href="#website-cfg.yaml-example">Website cfg.yaml Example</a></li>
 <li><a href="#theme-jinja2-template-example">Theme Jinja2 Template Example</a></li>
 <li><a href="#not-using-an-imprint-page">Not Using An Imprint Page</a></li>
 </ul>
@@ -248,14 +248,6 @@
 
       <div class="wrapper">
         <ul>
-
-          <li>
-            <input type="checkbox" id="list-item-1">
-            <label for="list-item-1" class="first">Download</label>
-            <ul>
-              <li><a href="/en_US/Documentation/Features/imprint.pdf">🡻 PDF</a></li>
-            </ul>
-          </li>
 
 
 
@@ -341,7 +333,7 @@
             <ul>
               <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/blob/master/en_US/Documentation/Features/imprint.md"><i class="fab fa-github fa-fw"></i>View latest on Github</a></li>
               <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/edit/master/en_US/Documentation/Features/imprint.md"><i class="fa fa-edit fa-fw"></i>Edit this page</a></li>
-              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/commit/afd48ea48b77f6a3f00d04b91551bb9bfd57ec58"><i class="fab fa-git-alt fa-fw"></i>View commit on Github</a></li>
+              <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/commit/fbfaf117441444a31910a07a59c29b647b06d27b"><i class="fab fa-git-alt fa-fw"></i>View commit on Github</a></li>
               <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/issues/new?title=Documentation"><i class="fa fa-book fa-fw"></i>Create documentation issue</a></li>
               <li><a class="tag-link" href="https://github.com/ckuelker/pankyll-documentation/issues/new"><i class="fas fa-tasks fa-fw"></i>Create project issue</a></li>
             </ul>
@@ -355,25 +347,27 @@
             <label for="list-item-6" class="first">Latest</label>
             <ul>
       
-              <li><a class="tag-link" href="/en_US/index.html">Welcome to Pankyll (2021-05-18)</a></li>
+              <li><a class="tag-link" href="/en_US/Pankyll-Themes/pankyll-theme-simplicissimus.html">Pankyll Theme Simplicissimus (2022-05-20)</a></li>
       
-              <li><a class="tag-link" href="/en_US/Documentation/Features/overview.html">Feature Overview (2021-05-18)</a></li>
+              <li><a class="tag-link" href="/en_US/About/index.html">Pankyll (2022-05-19)</a></li>
+      
+              <li><a class="tag-link" href="/en_US/index.html">Welcome (2022-05-19)</a></li>
+      
+              <li><a class="tag-link" href="/en_US/Documentation/Features/overview.html">Features (2022-05-19)</a></li>
       
               <li><a class="tag-link" href="/en_US/Documentation/Features/top10.html">Top 10 (2021-05-18)</a></li>
       
-              <li><a class="tag-link" href="/en_US/Documentation/Features/create-pdf.html">Create PDF (2021-05-13)</a></li>
+              <li><a class="tag-link" href="/en_US/Documentation/Features/word-count.html">Word Count (2021-05-13)</a></li>
       
               <li><a class="tag-link" href="/en_US/Documentation/Features/css-local.html">CSS Local (2021-05-13)</a></li>
       
-              <li><a class="tag-link" href="/en_US/Documentation/Features/js-local.html">JS Local (2021-05-13)</a></li>
+              <li><a class="tag-link" href="/en_US/Documentation/Features/create-pdf.html">Create PDF (2021-05-13)</a></li>
       
-              <li><a class="tag-link" href="/en_US/Documentation/Features/word-count.html">Word Count (2021-05-13)</a></li>
+              <li><a class="tag-link" href="/en_US/Documentation/Features/js-local.html">JS Local (2021-05-13)</a></li>
       
               <li><a class="tag-link" href="/en_US/Documentation/Features/body-include-after.html">Include After (2020-10-21)</a></li>
       
               <li><a class="tag-link" href="/en_US/Documentation/Features/body-include-before.html">Include Before (2020-10-21)</a></li>
-      
-              <li><a class="tag-link" href="/en_US/Documentation/Features/toc.html">Table Of Contents (2020-05-13)</a></li>
       
             </ul>
           </li>
@@ -462,9 +456,9 @@
             </ul>
             
             <ul class="footer-list footer-middle-list">
-              <li class="footer-item footer-middle-item site-update-last-item">Last site update: 2021-05-18</li>
+              <li class="footer-item footer-middle-item site-update-last-item">Last page update: 2022-05-20</li>
             
-              <li class="footer-item footer-middle-item">© 2020, 2021 Christian Külker, All Rights Reserved</li>
+              <li class="footer-item footer-middle-item">© 2020, 2021, 2022 Christian Külker, All Rights Reserved</li>
             
               <li class="footer-item footer-middle-item">Content license: <a class="rankle-link-dark" href="/en_US/License">GNU Free Document License v1.3</a></li>
             
