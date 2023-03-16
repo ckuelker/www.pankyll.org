@@ -3,10 +3,12 @@
 # |                                                                           |
 # | Copy over part of generated content                                       |
 # |                                                                           |
-# | Version: 0.1.2 (change inline)                                            |
+# | Version: 0.1.3 (change inline)                                            |
 # |                                                                           |
 # | Changes:                                                                  |
 # |                                                                           |
+# | 0.1.3 2023-03-16 Christian Külker <c@c8i.org>                             |
+# |     - Fix server target: echo and missing colon                           |
 # | 0.1.2 2022-05-19 Christian Külker <c@c8i.org>                             |
 # |     - Add server target                                                   |
 # |     - Improve info target                                                 |
@@ -18,7 +20,7 @@
 # |                                                                           |
 # +---------------------------------------------------------------------------+
 #
-VERSION=0.1.2
+VERSION=0.1.3
 # -----------------------------------------------------------------------------
 # NO CHANGES BEYOND THIS POINT
 ifndef VERSION
@@ -64,6 +66,6 @@ copy:
 linkcheck:
 	linkchecker --check-extern --no-status --ignore-url=/webfonts/fa-regular-400 -o blacklist https://www.pankyll.org
 server:
-	echo -e "$(L)\nhttp://localhost$(PORT)\nhttp://${HOST}:$(PORT)\n${L}";
+	echo "$(L)\nhttp://localhost:$(PORT)\nhttp://${HOST}:$(PORT)\n${L}";
 	$(PY) -m http.server $(PORT);
 
