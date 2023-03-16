@@ -2,8 +2,8 @@
 
 ## Overview
 
-This document describes the technical aspects of the repository
-`www.pankyll.org`. Technically this site is the `en_US` output of
+This document describes the technical aspects of the `www.pankyll.org`
+repository. Technically, this site is the `en_US` output of
 [pankyll-theme-rankle-example].
 
 ![Github license](https://img.shields.io/github/license/ckuelker/www.pankyll.org.svg)
@@ -16,6 +16,8 @@ This document describes the technical aspects of the repository
 
 | Version | Date       | Notes                                                |
 | ------- | ---------- | ---------------------------------------------------- |
+| 0.1.6   | 2023-03-16 | Improve writing, Fix Makefile, Documentation 0.2.1   |
+|         |            | LICENSE->COPYING                                     |
 | 0.1.5   | 2022-05-20 | Makefile, README: Display, Build pages, Doc 0.1.9    |
 | 0.1.4   | 2021-05-18 | Favicon, Documentation 0.1.7                         |
 | 0.1.3   | 2021-05-15 | Favicon, Documentation 0.1.6                         |
@@ -29,25 +31,27 @@ This document describes the technical aspects of the repository
 make server
 ```
 
-Connect to the server URL mentioned at the output.
+Connect to the server URL listed in the output.
 
 ## Building The Web Site www.pankyll.org
 
 ```bash
 git clone https://github.com/ckuelker/pankyll-theme-rankle-example.git
 cd pankyll-theme-rankle-example
-# The original www.pankyll.org is created with the feature 'create_pdf: False'
-# due to quota limitation of github.com
-make realclean submodule-update submodule-pull repository-update build
-cd ..
 
+# The original www.pankyll.org is created with the YAML key
+# 'create_pdf: False', due to github.com quota limit
+make realclean submodule-update submodule-pull repository-update build
+
+cd ..
 git clone https://github.com/ckuelker/www.pankyll.org.git
 cd www.pankyll.org
-# This merges to content of public/ into the current directory
-make copy
-# To see the web sites use and point your browser to the displayed URL
-make server
 
+# This will merge the contents of 'public/' into the current directory.
+make copy
+
+# To view the web site, use and point your browser to the URL displayed
+make server
 ```
 
 ## Author Of The Content in en_EN
@@ -62,7 +66,7 @@ The information for this external repositories is for courtesy only.
 
 For the remaining sources:
 
-    Copyright (C) 2020, 2021, 2022 by Christian Kuelker, see LICENSE file.
+    Copyright (C) 2020 - 2023 by Christian Kuelker, see COPYING file.
 
 ### pankyll-documentation
 
