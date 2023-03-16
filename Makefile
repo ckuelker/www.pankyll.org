@@ -66,6 +66,6 @@ copy:
 linkcheck:
 	linkchecker --check-extern --no-status --ignore-url=/webfonts/fa-regular-400 -o blacklist https://www.pankyll.org
 server:
-	echo "$(L)\nhttp://localhost:$(PORT)\nhttp://${HOST}:$(PORT)\n${L}";
+	@bash -c 'echo -e "$(L)\nhttp://localhost:$(PORT)\nhttp://${HOST}:$(PORT)\n${L}";'
 	$(PY) -m http.server $(PORT);
 
